@@ -8,22 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		0E0433AF1F141BE3005E6AF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0433AE1F141BE3005E6AF3 /* AppDelegate.swift */; };
-		0E0433B11F141BE3005E6AF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0433B01F141BE3005E6AF3 /* ViewController.swift */; };
 		0E0433B41F141BE4005E6AF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E0433B21F141BE3005E6AF3 /* Main.storyboard */; };
 		0E0433B71F141BE4005E6AF3 /* ChoreMates.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E0433B51F141BE4005E6AF3 /* ChoreMates.xcdatamodeld */; };
 		0E0433B91F141BE4005E6AF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E0433B81F141BE4005E6AF3 /* Assets.xcassets */; };
 		0E0433BC1F141BE4005E6AF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E0433BA1F141BE4005E6AF3 /* LaunchScreen.storyboard */; };
+		0E0433CA1F15334C005E6AF3 /* AddChoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0433C91F15334C005E6AF3 /* AddChoreViewController.swift */; };
+		0E0433CC1F15335E005E6AF3 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0433CB1F15335E005E6AF3 /* LogInViewController.swift */; };
+		0E0433CE1F153395005E6AF3 /* AllChoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0433CD1F153395005E6AF3 /* AllChoresViewController.swift */; };
+		0E0433D01F1533A4005E6AF3 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0433CF1F1533A4005E6AF3 /* CalendarViewController.swift */; };
+		0E0433D21F1533B4005E6AF3 /* ProfileSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0433D11F1533B4005E6AF3 /* ProfileSettingViewController.swift */; };
+		0E0433D41F153404005E6AF3 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0433D31F153404005E6AF3 /* MainTabBarController.swift */; };
+		0E0433D71F153892005E6AF3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0433D61F153892005E6AF3 /* User.swift */; };
+		0E0433D91F15394E005E6AF3 /* AddChoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0433D81F15394E005E6AF3 /* AddChoreCell.swift */; };
+		0E0433DB1F153B2B005E6AF3 /* Chore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0433DA1F153B2B005E6AF3 /* Chore.swift */; };
+		0E0433DD1F153E53005E6AF3 /* HousematesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0433DC1F153E53005E6AF3 /* HousematesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0E0433AB1F141BE3005E6AF3 /* ChoreMates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChoreMates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E0433AE1F141BE3005E6AF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0E0433B01F141BE3005E6AF3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0E0433B31F141BE3005E6AF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E0433B61F141BE4005E6AF3 /* ChoreMates.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChoreMates.xcdatamodel; sourceTree = "<group>"; };
 		0E0433B81F141BE4005E6AF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E0433BB1F141BE4005E6AF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E0433BD1F141BE4005E6AF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E0433C91F15334C005E6AF3 /* AddChoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddChoreViewController.swift; sourceTree = "<group>"; };
+		0E0433CB1F15335E005E6AF3 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		0E0433CD1F153395005E6AF3 /* AllChoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllChoresViewController.swift; sourceTree = "<group>"; };
+		0E0433CF1F1533A4005E6AF3 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		0E0433D11F1533B4005E6AF3 /* ProfileSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSettingViewController.swift; sourceTree = "<group>"; };
+		0E0433D31F153404005E6AF3 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		0E0433D61F153892005E6AF3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0E0433D81F15394E005E6AF3 /* AddChoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddChoreCell.swift; sourceTree = "<group>"; };
+		0E0433DA1F153B2B005E6AF3 /* Chore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chore.swift; sourceTree = "<group>"; };
+		0E0433DC1F153E53005E6AF3 /* HousematesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HousematesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +75,84 @@
 			isa = PBXGroup;
 			children = (
 				0E0433AE1F141BE3005E6AF3 /* AppDelegate.swift */,
-				0E0433B01F141BE3005E6AF3 /* ViewController.swift */,
+				0E0433C31F153220005E6AF3 /* Services */,
+				0E0433D51F153498005E6AF3 /* Views */,
+				0E0433C41F153228005E6AF3 /* Helpers */,
+				0E0433C61F153233005E6AF3 /* Models */,
+				0E0433C51F15322E005E6AF3 /* View Controllers */,
+				0E0433C71F153239005E6AF3 /* Storyboards */,
 				0E0433B21F141BE3005E6AF3 /* Main.storyboard */,
 				0E0433B81F141BE4005E6AF3 /* Assets.xcassets */,
-				0E0433BA1F141BE4005E6AF3 /* LaunchScreen.storyboard */,
-				0E0433BD1F141BE4005E6AF3 /* Info.plist */,
 				0E0433B51F141BE4005E6AF3 /* ChoreMates.xcdatamodeld */,
+				0E0433C81F1532B5005E6AF3 /* Supporting */,
 			);
 			path = ChoreMates;
+			sourceTree = "<group>";
+		};
+		0E0433C31F153220005E6AF3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0E0433D81F15394E005E6AF3 /* AddChoreCell.swift */,
+			);
+			name = Services;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		0E0433C41F153228005E6AF3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		0E0433C51F15322E005E6AF3 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0E0433CB1F15335E005E6AF3 /* LogInViewController.swift */,
+				0E0433C91F15334C005E6AF3 /* AddChoreViewController.swift */,
+				0E0433CD1F153395005E6AF3 /* AllChoresViewController.swift */,
+				0E0433CF1F1533A4005E6AF3 /* CalendarViewController.swift */,
+				0E0433D11F1533B4005E6AF3 /* ProfileSettingViewController.swift */,
+				0E0433D31F153404005E6AF3 /* MainTabBarController.swift */,
+				0E0433DC1F153E53005E6AF3 /* HousematesViewController.swift */,
+			);
+			name = "View Controllers";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		0E0433C61F153233005E6AF3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0E0433D61F153892005E6AF3 /* User.swift */,
+				0E0433DA1F153B2B005E6AF3 /* Chore.swift */,
+			);
+			name = Models;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		0E0433C71F153239005E6AF3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Storyboards;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		0E0433C81F1532B5005E6AF3 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				0E0433BA1F141BE4005E6AF3 /* LaunchScreen.storyboard */,
+				0E0433BD1F141BE4005E6AF3 /* Info.plist */,
+			);
+			name = Supporting;
+			sourceTree = "<group>";
+		};
+		0E0433D51F153498005E6AF3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,9 +228,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E0433CA1F15334C005E6AF3 /* AddChoreViewController.swift in Sources */,
+				0E0433D91F15394E005E6AF3 /* AddChoreCell.swift in Sources */,
 				0E0433B71F141BE4005E6AF3 /* ChoreMates.xcdatamodeld in Sources */,
-				0E0433B11F141BE3005E6AF3 /* ViewController.swift in Sources */,
+				0E0433DB1F153B2B005E6AF3 /* Chore.swift in Sources */,
+				0E0433D41F153404005E6AF3 /* MainTabBarController.swift in Sources */,
+				0E0433CC1F15335E005E6AF3 /* LogInViewController.swift in Sources */,
+				0E0433DD1F153E53005E6AF3 /* HousematesViewController.swift in Sources */,
+				0E0433CE1F153395005E6AF3 /* AllChoresViewController.swift in Sources */,
+				0E0433D71F153892005E6AF3 /* User.swift in Sources */,
+				0E0433D01F1533A4005E6AF3 /* CalendarViewController.swift in Sources */,
 				0E0433AF1F141BE3005E6AF3 /* AppDelegate.swift in Sources */,
+				0E0433D21F1533B4005E6AF3 /* ProfileSettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +403,7 @@
 				0E0433C21F141BE4005E6AF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
