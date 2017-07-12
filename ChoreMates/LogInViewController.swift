@@ -7,9 +7,30 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseAuthUI
 
 class LogInViewController: UIViewController {
+    
+    // MARK: - IBOutlets
+    
+    // MARK: - IBAction
+//    @IBAction func loginButtonTapped(_ sender: UIButton) {
+//        // 1
+//        guard let authUI = FUIAuth.defaultAuthUI()
+//            else { return }
+//        
+//        // 2
+//        authUI.delegate = self
+//        
+//        // 3
+//        let authViewController = authUI.authViewController()
+//        present(authViewController, animated: true)
+//    }
+    
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,16 +41,11 @@ class LogInViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    /*
+    
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+
 
 }
