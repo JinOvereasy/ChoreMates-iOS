@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import Firebase
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -21,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         // 1 
-        let storyboard = UIStoryboard(name: "Login", bundle: .main)
+        let storyboard = UIStoryboard(name: "Main", bundle: .main)
         
         // 2
         if let initialViewController = storyboard.instantiateInitialViewController() {
@@ -30,7 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // 4
             window?.makeKeyAndVisible()
         }
-        
         return true
     }
 
