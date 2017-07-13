@@ -68,6 +68,7 @@ class TTTTrialViewController: UIViewController, MFMailComposeViewControllerDeleg
     @IBAction func onSignIn(_ sender: UIButton) {
 //        let email = emailTexField.text
 //        let password = passTextField.text
+        
         Auth.auth().signIn(withEmail: "imreallyjin@gmail.com", password: "1234567") { (user, error) in
             print(user, error)
         }

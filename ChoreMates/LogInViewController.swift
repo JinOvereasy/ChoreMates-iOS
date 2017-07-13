@@ -14,21 +14,20 @@ class LogInViewController: UIViewController {
     
     // MARK: - IBOutlets
     
-    // MARK: - IBAction
-//    @IBAction func loginButtonTapped(_ sender: UIButton) {
-//        // 1
-//        guard let authUI = FUIAuth.defaultAuthUI()
-//            else { return }
-//        
-//        // 2
-//        authUI.delegate = self
-//        
-//        // 3
-//        let authViewController = authUI.authViewController()
-//        present(authViewController, animated: true)
-//    }
-    
+    @IBOutlet weak var emailTextField: UITextField!
 
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    // MARK: - IBAction
+
+    
+    @IBAction func loginButtonTapped(_ sender: UIButton) {
+        print("log in button tapped")
+    }
+
+    @IBAction func unwindtoWelcomeView(segue: UIStoryboardSegue) {
+        dismiss(animated: true, completion: nil)
+    }
     
     
     override func viewDidLoad() {
@@ -42,10 +41,13 @@ class LogInViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    
-    
     // MARK: - Navigation
 
-
-
 }
+
+
+
+
+
+
+

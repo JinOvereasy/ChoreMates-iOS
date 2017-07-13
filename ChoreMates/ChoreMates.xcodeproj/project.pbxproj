@@ -25,6 +25,8 @@
 		0E0433FF1F156E65005E6AF3 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E0433FE1F156E65005E6AF3 /* Login.storyboard */; };
 		0E0434011F1571DF005E6AF3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E0434001F1571DF005E6AF3 /* GoogleService-Info.plist */; };
 		0E0434031F158621005E6AF3 /* TTTTrialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0434021F158621005E6AF3 /* TTTTrialViewController.swift */; };
+		0E0434251F17E341005E6AF3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0434241F17E341005E6AF3 /* SignUpViewController.swift */; };
+		0E0434271F17E3BB005E6AF3 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0434261F17E3BB005E6AF3 /* ResetPasswordViewController.swift */; };
 		6AE8E40E9CF677DFD713C6EB /* Pods_ChoreMates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E73BA8F4CA61551754F2A8 /* Pods_ChoreMates.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,8 @@
 		0E0433FE1F156E65005E6AF3 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		0E0434001F1571DF005E6AF3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0E0434021F158621005E6AF3 /* TTTTrialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTTTrialViewController.swift; sourceTree = "<group>"; };
+		0E0434241F17E341005E6AF3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		0E0434261F17E3BB005E6AF3 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		21ABE8A4A01D8D1132AF6266 /* Pods-ChoreMates.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoreMates.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChoreMates/Pods-ChoreMates.debug.xcconfig"; sourceTree = "<group>"; };
 		B0E73BA8F4CA61551754F2A8 /* Pods_ChoreMates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChoreMates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF2342E4FE5E57DEFC28AD53 /* Pods-ChoreMates.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoreMates.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChoreMates/Pods-ChoreMates.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 		0E0433C41F153228005E6AF3 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				0E0433D81F15394E005E6AF3 /* AddChoreCell.swift */,
 			);
 			name = Helpers;
 			path = ..;
@@ -121,7 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				0E0433CB1F15335E005E6AF3 /* LogInViewController.swift */,
-				0E0433D81F15394E005E6AF3 /* AddChoreCell.swift */,
+				0E0434241F17E341005E6AF3 /* SignUpViewController.swift */,
+				0E0434261F17E3BB005E6AF3 /* ResetPasswordViewController.swift */,
 				0E0433C91F15334C005E6AF3 /* AddChoreViewController.swift */,
 				0E0433CD1F153395005E6AF3 /* AllChoresViewController.swift */,
 				0E0433CF1F1533A4005E6AF3 /* CalendarViewController.swift */,
@@ -322,9 +328,11 @@
 				0E0433D41F153404005E6AF3 /* MainTabBarController.swift in Sources */,
 				0E0433CC1F15335E005E6AF3 /* LogInViewController.swift in Sources */,
 				0E0433DD1F153E53005E6AF3 /* HousematesViewController.swift in Sources */,
+				0E0434251F17E341005E6AF3 /* SignUpViewController.swift in Sources */,
 				0E0433CE1F153395005E6AF3 /* AllChoresViewController.swift in Sources */,
 				0E0433D71F153892005E6AF3 /* User.swift in Sources */,
 				0E0433D01F1533A4005E6AF3 /* CalendarViewController.swift in Sources */,
+				0E0434271F17E3BB005E6AF3 /* ResetPasswordViewController.swift in Sources */,
 				0E0433AF1F141BE3005E6AF3 /* AppDelegate.swift in Sources */,
 				0E0433D21F1533B4005E6AF3 /* ProfileSettingViewController.swift in Sources */,
 			);
