@@ -125,11 +125,11 @@
 			children = (
 				0E0433CB1F15335E005E6AF3 /* LogInViewController.swift */,
 				0E0434241F17E341005E6AF3 /* SignUpViewController.swift */,
+				0E0433D11F1533B4005E6AF3 /* ProfileSettingViewController.swift */,
 				0E0434261F17E3BB005E6AF3 /* ResetPasswordViewController.swift */,
 				0E0433C91F15334C005E6AF3 /* AddChoreViewController.swift */,
 				0E0433CD1F153395005E6AF3 /* AllChoresViewController.swift */,
 				0E0433CF1F1533A4005E6AF3 /* CalendarViewController.swift */,
-				0E0433D11F1533B4005E6AF3 /* ProfileSettingViewController.swift */,
 				0E0433D31F153404005E6AF3 /* MainTabBarController.swift */,
 				0E0433DC1F153E53005E6AF3 /* HousematesViewController.swift */,
 				0E0434021F158621005E6AF3 /* TTTTrialViewController.swift */,

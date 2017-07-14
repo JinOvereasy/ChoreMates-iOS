@@ -47,7 +47,7 @@
             </objects>
             <point key="canvasLocation" x="209" y="524"/>
         </scene>
-        <!--My Profile-->
+        <!--My Profile -->
         <scene sceneID="MgK-1Z-3il">
             <objects>
                 <viewController id="nEB-Ja-b21" customClass="ProfileSettingViewController" customModule="ChoreMates" customModuleProvider="target" sceneMemberID="viewController">
@@ -58,13 +58,43 @@
                     <view key="view" contentMode="scaleToFill" id="pFu-0m-iO4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urH-6V-KhJ">
+                                <rect key="frame" x="160" y="480" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="logoutWithSender:" destination="nEB-Ja-b21" eventType="touchUpInside" id="nNd-bp-rNw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXw-RK-0PN" userLabel="nameLabel">
+                                <rect key="frame" x="92" y="147" width="198" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="nameLabel"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Profile" id="cDw-LS-ThP"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="My Profile " id="pdr-2v-m2i">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hW0-NZ-MjC">
+                            <connections>
+                                <segue destination="vl2-Cs-zu0" kind="unwind" unwindAction="cancelToAllChoresViewControllerWithSegue:" id="b4I-ZR-cFQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="GXw-RK-0PN" id="mbH-L6-PMF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HRV-gv-kXm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="vl2-Cs-zu0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="665" y="-285"/>
+            <point key="canvasLocation" x="1128.8" y="-287.40629685157421"/>
         </scene>
         <!--All Chores-->
         <scene sceneID="6qG-K3-ttI">
@@ -179,7 +209,7 @@
                         <segue destination="9Bt-Qc-su2" kind="relationship" relationship="viewControllers" id="ILb-r9-Oen"/>
                         <segue destination="g5L-fJ-KvO" kind="relationship" relationship="viewControllers" id="vt6-ag-rTH"/>
                         <segue destination="mSO-zi-BTs" kind="relationship" relationship="viewControllers" id="Acs-3S-gBm"/>
-                        <segue destination="nEB-Ja-b21" kind="relationship" relationship="viewControllers" id="j4u-6J-CLN"/>
+                        <segue destination="K8f-M4-Jwb" kind="relationship" relationship="viewControllers" id="j4u-6J-CLN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oaf-rX-bPN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -189,7 +219,7 @@
         <!--Log In View Controller-->
         <scene sceneID="0PV-bN-oYn">
             <objects>
-                <viewController id="WIV-AY-i0K" customClass="LogInViewController" customModule="ChoreMates" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginView" id="WIV-AY-i0K" customClass="LogInViewController" customModule="ChoreMates" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bma-eM-xr8"/>
                         <viewControllerLayoutGuide type="bottom" id="Cf8-El-jh7"/>
@@ -224,9 +254,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTH-eg-nKp">
                                         <rect key="frame" x="59" y="366" width="256" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Sign In"/>
+                                        <state key="normal" title="Log In"/>
                                         <connections>
-                                            <action selector="loginButtonTapped:" destination="WIV-AY-i0K" eventType="touchUpInside" id="kNX-Yt-BZd"/>
+                                            <action selector="loginWithSender:" destination="WIV-AY-i0K" eventType="touchUpInside" id="qaX-6m-LRj"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4C0-Jd-KYM">
@@ -430,6 +460,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="glg-gO-ZeP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2122" y="-286"/>
+        </scene>
+        <!--My Profile-->
+        <scene sceneID="vnd-Vn-fUY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K8f-M4-Jwb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Profile" id="cDw-LS-ThP"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TSl-tI-tTa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nEB-Ja-b21" kind="relationship" relationship="rootViewController" id="uUl-WG-07I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sci-9S-hqw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="441" y="-287"/>
         </scene>
     </scenes>
 </document>

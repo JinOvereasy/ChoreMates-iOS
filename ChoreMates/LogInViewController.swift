@@ -13,20 +13,49 @@ import FirebaseAuthUI
 class LogInViewController: UIViewController {
     
     // MARK: - IBOutlets
-    
     @IBOutlet weak var emailTextField: UITextField!
-
     @IBOutlet weak var passwordTextField: UITextField!
+
     
     // MARK: - IBAction
-
-    
-    @IBAction func loginButtonTapped(_ sender: UIButton) {
-        print("log in button tapped")
-    }
-
     @IBAction func unwindtoWelcomeView(segue: UIStoryboardSegue) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func login(sender: UIButton) {
+        // Validate the input
+        guard let emailAddress = emailTextField.text, emailAddress != "",
+            let password = passwordTextField.text, password != "" else {
+                let alertController = UIAlertController(title: "Login Error", message: "Both fields must not be blank.", preferredStyle: .alert)
+                let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(okayAction)
+                present(alertController, animated: true, completion: nil)
+                
+                return
+        }
+        
+        // Perform login by calling Firebase APIs
+        Auth.auth().signIn(withEmail: emailAddress, password: password, completion: {
+            (user, error) in
+            if let error = error {
+                let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
+                let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(okayAction)
+                self.present(alertController, animated: true, completion: nil)
+                
+                return
+            }
+            
+            // dissmiss keyboard
+            self.view.endEditing(true)
+            
+            // Present the main view
+            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MainView") {
+                UIApplication.shared.keyWindow?.rootViewController = viewController
+                self.dismiss(animated: true, completion: nil)
+            }
+            
+        })
     }
     
     
