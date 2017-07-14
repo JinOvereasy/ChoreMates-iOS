@@ -36,8 +36,6 @@ class ProfileSettingViewController: UIViewController {
         
     }
     
-    @IBAction func cancelToAllChoresViewController(segue:UIStoryboardSegue) {
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

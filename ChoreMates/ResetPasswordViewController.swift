@@ -11,7 +11,46 @@ import Firebase
 
 class ResetPasswordViewController: UIViewController {
 
+    // MARK: - IBOutlet
     @IBOutlet weak var emailTextField: UITextField!
+    
+    
+    // MARK: - IBAction
+    @IBAction func resetPassword(sender: UIButton) {
+        // Validate the input
+        guard let emailAddress = emailTextField.text,
+            emailAddress != "" else {
+                let alertController = UIAlertController(title: "Input Error", message: "Please provide your email address for password reset.", preferredStyle: .alert)
+                let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                
+                alertController.addAction(okayAction)
+                present(alertController, animated: true, completion: nil)
+                
+                return
+        }
+        
+        // Send password reset email
+        Auth.auth().sendPasswordReset(withEmail: emailAddress, completion: {(error) in
+            let title = (error == nil) ? "Password Reset Follow-up" : "Password Reset Error"
+            let message = (error == nil) ? "We have just sent you a password reset email. Please check your inbox and follow the instructions to reset your password." : error?.localizedDescription
+            let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: { (action) in
+                if error == nil {
+                    // Dismiss keyboard
+                    self.view.endEditing(true)
+                    // Return to the login screen
+                    if let navController = self.navigationController {
+                        navController.popViewController(animated: true)
+                    }
+                }
+            })
+            alertController.addAction(okayAction)
+        
+            self.present(alertController, animated: true, completion: nil)
+        })
+    }
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -23,6 +23,9 @@ class AllChoresViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func unwindtoAllChoresView (segue: UIStoryboardSegue) {
+        dismiss(animated: true, completion: nil)
+    }
     
 
     /*

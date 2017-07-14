@@ -82,7 +82,7 @@
                     <navigationItem key="navigationItem" title="My Profile " id="pdr-2v-m2i">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hW0-NZ-MjC">
                             <connections>
-                                <segue destination="vl2-Cs-zu0" kind="unwind" unwindAction="cancelToAllChoresViewControllerWithSegue:" id="b4I-ZR-cFQ"/>
+                                <segue destination="vl2-Cs-zu0" kind="unwind" unwindAction="unwindtoAllChoresViewWithSegue:" id="CeD-oo-oIc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -323,6 +323,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="resetPasswordWithSender:" destination="YMi-lx-SzO" eventType="touchUpInside" id="Nnf-03-Ybk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJH-M6-wDd">
                                 <rect key="frame" x="68" y="334" width="256" height="60"/>
@@ -332,7 +335,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="8Vc-tY-VGN" kind="unwind" unwindAction="unwindtoWelcomeViewWithSegue:" id="egK-Fc-elC"/>
+                                    <segue destination="8Vc-tY-VGN" kind="unwind" unwindAction="unwindtoWelcomeViewWithSegue:" id="Vfy-re-58p"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kQM-CT-tIX">
