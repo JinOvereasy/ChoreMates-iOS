@@ -66,10 +66,10 @@ class LogInViewController: UIViewController {
             self.view.endEditing(true)
             
             // Present the main view
-//            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MainView") {
-//                UIApplication.shared.keyWindow?.rootViewController = viewController
-//                self.dismiss(animated: true, completion: nil)
-//            }
+            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MainView") {
+                UIApplication.shared.keyWindow?.rootViewController = viewController
+                self.dismiss(animated: true, completion: nil)
+            }
             
         })
     }

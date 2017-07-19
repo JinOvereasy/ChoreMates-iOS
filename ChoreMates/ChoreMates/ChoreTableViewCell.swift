@@ -1,14 +1,14 @@
 //
-//  AddChoreCell.swift
+//  ChoreTableViewCell.swift
 //  ChoreMates
 //
-//  Created by James Kang on 7/11/17.
+//  Created by James Kang on 7/19/17.
 //  Copyright © 2017 James Kang. All rights reserved.
 //
 
 import UIKit
 
-class AddChoreCell: UITableViewCell {
+class ChoreTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

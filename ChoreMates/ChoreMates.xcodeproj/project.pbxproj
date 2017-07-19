@@ -19,7 +19,6 @@
 		0E0433D21F1533B4005E6AF3 /* ProfileSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0433D11F1533B4005E6AF3 /* ProfileSettingViewController.swift */; };
 		0E0433D41F153404005E6AF3 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0433D31F153404005E6AF3 /* MainTabBarController.swift */; };
 		0E0433D71F153892005E6AF3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0433D61F153892005E6AF3 /* User.swift */; };
-		0E0433D91F15394E005E6AF3 /* AddChoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0433D81F15394E005E6AF3 /* AddChoreCell.swift */; };
 		0E0433DB1F153B2B005E6AF3 /* Chore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0433DA1F153B2B005E6AF3 /* Chore.swift */; };
 		0E0433DD1F153E53005E6AF3 /* HousematesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0433DC1F153E53005E6AF3 /* HousematesViewController.swift */; };
 		0E0434011F1571DF005E6AF3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E0434001F1571DF005E6AF3 /* GoogleService-Info.plist */; };
@@ -28,6 +27,9 @@
 		0E0434271F17E3BB005E6AF3 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0434261F17E3BB005E6AF3 /* ResetPasswordViewController.swift */; };
 		0E3F9D941F1E75DA00C8A3AA /* EditChoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3F9D931F1E75DA00C8A3AA /* EditChoreViewController.swift */; };
 		0E3F9D961F1EC96400C8A3AA /* NextDueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3F9D951F1EC96400C8A3AA /* NextDueViewController.swift */; };
+		0EA6C3791F1FC09F008D0A73 /* ChoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6C3781F1FC09F008D0A73 /* ChoreTableViewCell.swift */; };
+		0EA6C37C1F1FC29C008D0A73 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA6C37A1F1FC29C008D0A73 /* Login.storyboard */; };
+		0EA6C37E1F1FC348008D0A73 /* Chores.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA6C37D1F1FC348008D0A73 /* Chores.storyboard */; };
 		6AE8E40E9CF677DFD713C6EB /* Pods_ChoreMates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E73BA8F4CA61551754F2A8 /* Pods_ChoreMates.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +48,6 @@
 		0E0433D11F1533B4005E6AF3 /* ProfileSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSettingViewController.swift; sourceTree = "<group>"; };
 		0E0433D31F153404005E6AF3 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		0E0433D61F153892005E6AF3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		0E0433D81F15394E005E6AF3 /* AddChoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddChoreCell.swift; sourceTree = "<group>"; };
 		0E0433DA1F153B2B005E6AF3 /* Chore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chore.swift; sourceTree = "<group>"; };
 		0E0433DC1F153E53005E6AF3 /* HousematesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HousematesViewController.swift; sourceTree = "<group>"; };
 		0E0434001F1571DF005E6AF3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -55,6 +56,9 @@
 		0E0434261F17E3BB005E6AF3 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		0E3F9D931F1E75DA00C8A3AA /* EditChoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditChoreViewController.swift; sourceTree = "<group>"; };
 		0E3F9D951F1EC96400C8A3AA /* NextDueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextDueViewController.swift; sourceTree = "<group>"; };
+		0EA6C3781F1FC09F008D0A73 /* ChoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoreTableViewCell.swift; sourceTree = "<group>"; };
+		0EA6C37B1F1FC29C008D0A73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ChoreMates/Base.lproj/Login.storyboard; sourceTree = "<group>"; };
+		0EA6C37D1F1FC348008D0A73 /* Chores.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chores.storyboard; sourceTree = "<group>"; };
 		21ABE8A4A01D8D1132AF6266 /* Pods-ChoreMates.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoreMates.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChoreMates/Pods-ChoreMates.debug.xcconfig"; sourceTree = "<group>"; };
 		B0E73BA8F4CA61551754F2A8 /* Pods_ChoreMates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChoreMates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF2342E4FE5E57DEFC28AD53 /* Pods-ChoreMates.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoreMates.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChoreMates/Pods-ChoreMates.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,7 +122,6 @@
 		0E0433C41F153228005E6AF3 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				0E0433D81F15394E005E6AF3 /* AddChoreCell.swift */,
 			);
 			name = Helpers;
 			path = ..;
@@ -158,6 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				0E0433B21F141BE3005E6AF3 /* Main.storyboard */,
+				0EA6C37D1F1FC348008D0A73 /* Chores.storyboard */,
+				0EA6C37A1F1FC29C008D0A73 /* Login.storyboard */,
 			);
 			name = Storyboards;
 			path = ..;
@@ -176,6 +181,7 @@
 		0E0433D51F153498005E6AF3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0EA6C3781F1FC09F008D0A73 /* ChoreTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -260,9 +266,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EA6C37E1F1FC348008D0A73 /* Chores.storyboard in Resources */,
 				0E0433BC1F141BE4005E6AF3 /* LaunchScreen.storyboard in Resources */,
 				0E0434011F1571DF005E6AF3 /* GoogleService-Info.plist in Resources */,
 				0E0433B91F141BE4005E6AF3 /* Assets.xcassets in Resources */,
+				0EA6C37C1F1FC29C008D0A73 /* Login.storyboard in Resources */,
 				0E0433B41F141BE4005E6AF3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,7 +333,6 @@
 				0E3F9D961F1EC96400C8A3AA /* NextDueViewController.swift in Sources */,
 				0E0433CA1F15334C005E6AF3 /* AddChoreViewController.swift in Sources */,
 				0E0434031F158621005E6AF3 /* TTTTrialViewController.swift in Sources */,
-				0E0433D91F15394E005E6AF3 /* AddChoreCell.swift in Sources */,
 				0E0433B71F141BE4005E6AF3 /* ChoreMates.xcdatamodeld in Sources */,
 				0E0433DB1F153B2B005E6AF3 /* Chore.swift in Sources */,
 				0E0433D41F153404005E6AF3 /* MainTabBarController.swift in Sources */,
@@ -334,6 +341,7 @@
 				0E0434251F17E341005E6AF3 /* SignUpViewController.swift in Sources */,
 				0E0433CE1F153395005E6AF3 /* AllChoresViewController.swift in Sources */,
 				0E0433D71F153892005E6AF3 /* User.swift in Sources */,
+				0EA6C3791F1FC09F008D0A73 /* ChoreTableViewCell.swift in Sources */,
 				0E0433D01F1533A4005E6AF3 /* CalendarViewController.swift in Sources */,
 				0E0434271F17E3BB005E6AF3 /* ResetPasswordViewController.swift in Sources */,
 				0E0433AF1F141BE3005E6AF3 /* AppDelegate.swift in Sources */,
@@ -360,6 +368,14 @@
 				0E0433BB1F141BE4005E6AF3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		0EA6C37A1F1FC29C008D0A73 /* Login.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0EA6C37B1F1FC29C008D0A73 /* Base */,
+			);
+			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
