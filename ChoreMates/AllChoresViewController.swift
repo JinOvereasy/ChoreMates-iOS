@@ -10,7 +10,14 @@ import UIKit
 
 class AllChoresViewController: UIViewController {
 
+    // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
+    
+    var myOwnChoresArray = [Chore]()
+    var otherChoresArray = [Chore]()
+    
+    // array of chores
+    // link all of the things
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,16 +34,7 @@ class AllChoresViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     
 }
@@ -50,6 +48,7 @@ extension AllChoresViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "postChoreCell", for: indexPath) 
         
         cell.textLabel?.text = "I am the cell"
+        // cell.textLabel?.text = choreTitleLabel.text
         cell.detailTextLabel?.text = "I am the detail"
         
         return cell

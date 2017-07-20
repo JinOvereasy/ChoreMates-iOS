@@ -10,6 +10,22 @@ import UIKit
 
 class ChoreTableViewCell: UITableViewCell {
 
+    // MARK - IBOutlets
+    // link all the items, labels, buttons,
+    
+    @IBOutlet weak var choreTitleLabel: UILabel!
+    @IBOutlet weak var dueDateLabel: UILabel!
+    
+    @IBAction func checkMarkButton(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func editChoreButton(_ sender: UIButton) {
+        
+    }
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

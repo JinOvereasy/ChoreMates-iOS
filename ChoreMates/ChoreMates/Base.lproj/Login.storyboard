@@ -147,7 +147,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xo3-AV-PaC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="8Vc-tY-VGN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-860" y="-1234"/>
+            <point key="canvasLocation" x="-860" y="-1018"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="d0e-GU-NjV">
@@ -217,7 +217,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zhX-4c-GUU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="7ZD-M5-M3p" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-860" y="-199"/>
+            <point key="canvasLocation" x="-860" y="-361"/>
         </scene>
         <!--MainView-->
         <scene sceneID="fKe-bR-dpN">

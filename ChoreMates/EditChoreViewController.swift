@@ -10,6 +10,10 @@ import UIKit
 
 class EditChoreViewController: UIViewController {
 
+    var chore: Chore?
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +24,15 @@ class EditChoreViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    @IBAction func dayButtonClicked(_ sender: UIButton) {
+        // switch case on sender.text
+    }
+    /*
+     if the chore == nil, put the input as chore (gotta be optional since it could be nil),
+     if the chore has value, then it will head to Edit chore viewController
+     */
     
 
     /*
