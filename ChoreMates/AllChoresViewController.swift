@@ -46,18 +46,15 @@ extension AllChoresViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "postChoreCell", for: indexPath) as! ChoreTableViewCell
- 
         // cell.textLabel?.text = "I am the cell"
         // cell.textLabel?.text = choreTitleLabel.text
         // cell.detailTextLabel?.text = "I am the detail"
-        
         cell.choreTitleLabel.text = "Do dishes"
         cell.dueDateLabel.text = "Tu"
 
         return cell
     }
 }
-
 
 extension AllChoresViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

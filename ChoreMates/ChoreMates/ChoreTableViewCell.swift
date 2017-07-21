@@ -10,12 +10,12 @@ import UIKit
 
 class ChoreTableViewCell: UITableViewCell {
 
-    // MARK - IBOutlets
+    // MARK: - IBOutlets
     // link all the items, labels, buttons,
-    
     @IBOutlet weak var choreTitleLabel: UILabel!
     @IBOutlet weak var dueDateLabel: UILabel!
     
+    // MARK: - IBActions
     @IBAction func checkMarkButton(_ sender: UIButton) {
         
     }
@@ -23,8 +23,6 @@ class ChoreTableViewCell: UITableViewCell {
     @IBAction func editChoreButton(_ sender: UIButton) {
         
     }
-    
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,5 +34,14 @@ class ChoreTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    // MARK: - Navigation
 
 }
+
+
+
+
+
+
+
