@@ -12,14 +12,23 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 
     var chore: Chore?
     var pickerData: [String] = [String]()
+    var placementAnswer = 0
     
     // MARK: - IBOutlets
     @IBOutlet weak var choreTextField: UITextField!
     @IBOutlet weak var assignChoreLabel: UILabel!
     @IBOutlet weak var personPicker: UIPickerView!
+    @IBOutlet weak var chosenPersonLabel: UILabel!
+
     
     // MARK: - IBAction
+    
+    @IBAction func selectPerson(_ sender: UIButton) {
+        chosenPersonLabel.text = pickerData[placementAnswer]
+    }
+    
     @IBAction func dayButtonClicked(_ sender: UIButton) {
+   
     }
     
     /*
@@ -64,6 +73,7 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // This method is triggered whenever the user makes a change to the picker selection.
         // the parameter named row and component represents what was selected.
+        placementAnswer = row
     }
 
     /*
