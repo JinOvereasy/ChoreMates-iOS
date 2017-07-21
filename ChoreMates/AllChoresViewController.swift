@@ -58,6 +58,7 @@ extension AllChoresViewController: UITableViewDataSource {
     }
 }
 
+
 extension AllChoresViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("I am clicked: \(indexPath)")

@@ -41,10 +41,13 @@
                                                         <segue destination="BD7-G9-4kD" kind="show" identifier="showEditChore" id="Usj-WL-lVn"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfC-zh-QXq">
-                                                    <rect key="frame" x="8" y="13" width="78" height="49"/>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfC-zh-QXq">
+                                                    <rect key="frame" x="0.0" y="13" width="94" height="49"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Checkmark"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <state key="normal" title="Checkmark">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="checkMarkButton:" destination="QPP-kq-sFe" eventType="touchUpInside" id="Zhc-JL-Sae"/>
                                                     </connections>
@@ -98,10 +101,10 @@
             </objects>
             <point key="canvasLocation" x="-1204" y="75.112443778110944"/>
         </scene>
-        <!--Edit Chore View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="oXc-9i-DJE">
             <objects>
-                <viewController id="BD7-G9-4kD" customClass="EditChoreViewController" customModule="ChoreMates" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BD7-G9-4kD" customClass="DetailViewController" customModule="ChoreMates" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7xA-wG-BHx"/>
                         <viewControllerLayoutGuide type="bottom" id="9Ia-SQ-Zod"/>
@@ -122,7 +125,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="M"/>
                                 <connections>
-                                    <action selector="dayButtonClicked:" destination="BD7-G9-4kD" eventType="touchUpInside" id="eUn-KV-J2L"/>
+                                    <action selector="dayButtonClicked:" destination="BD7-G9-4kD" eventType="touchUpInside" id="NdQ-6z-8aO"/>
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LRe-8s-3DV">
@@ -140,7 +143,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="dayButtonClicked:" destination="BD7-G9-4kD" eventType="touchUpInside" id="hG2-a0-ST4"/>
+                                    <action selector="dayButtonClicked:" destination="BD7-G9-4kD" eventType="touchUpInside" id="RcT-pb-BA5"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Chore Title / Notes" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ihA-Hv-LjR">
