@@ -12,7 +12,6 @@ import Firebase
 class ProfileSettingViewController: UIViewController {
 
     // MARK: - IBOutlets
-    
     @IBOutlet weak var nameLabel: UILabel!
     
     // MARK: - IBActions

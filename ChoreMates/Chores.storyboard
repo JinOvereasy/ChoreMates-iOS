@@ -42,7 +42,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfC-zh-QXq">
-                                                    <rect key="frame" x="0.0" y="13" width="94" height="49"/>
+                                                    <rect key="frame" x="0.0" y="13" width="85" height="51"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <state key="normal" title="Checkmark">
@@ -131,20 +131,6 @@
                                 <rect key="frame" x="0.0" y="219" width="375" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXg-rY-vvF">
-                                <rect key="frame" x="58" y="514" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="Su">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <state key="selected">
-                                    <color key="titleColor" red="0.012219434781954554" green="0.17979755625341878" blue="0.92863657994923854" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="dayButtonClicked:" destination="BD7-G9-4kD" eventType="touchUpInside" id="RcT-pb-BA5"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Chore Title / Notes" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ihA-Hv-LjR">
                                 <rect key="frame" x="41" y="86" width="247" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -164,7 +150,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Tu"/>
                                 <connections>
-                                    <action selector="dayButtonClicked:" destination="BD7-G9-4kD" eventType="touchUpInside" id="hEV-xf-DvK"/>
+                                    <action selector="dayButtonClicked:" destination="BD7-G9-4kD" eventType="touchUpInside" id="dO2-VF-M5Q"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dt-GQ-zve">
@@ -212,6 +198,14 @@
                                 <state key="normal" title="Select"/>
                                 <connections>
                                     <action selector="selectPerson:" destination="BD7-G9-4kD" eventType="touchUpInside" id="DWJ-LA-ex3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZwQ-aM-to2">
+                                <rect key="frame" x="54" y="512" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Su"/>
+                                <connections>
+                                    <action selector="dayButtonClicked:" destination="BD7-G9-4kD" eventType="touchUpInside" id="7hu-WU-Y6U"/>
                                 </connections>
                             </button>
                         </subviews>

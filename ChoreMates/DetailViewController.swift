@@ -11,6 +11,7 @@ import UIKit
 class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     var chore: Chore?
+    var daysArray: [Day] = [Day]()
     var pickerData: [String] = [String]()
     var placementAnswer = 0
     
@@ -28,7 +29,16 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     }
     
     @IBAction func dayButtonClicked(_ sender: UIButton) {
-   
+
+        sender.isSelected = !sender.isSelected
+        
+        if sender.isSelected != true {
+            // daysArray.remove(Day(rawValue: sender.currentTitle) ?? .Su)
+            // daysArray.remove(at: Day(rawValue: sender.currentTitle))
+        }
+        
+        daysArray.append(Day(rawValue: sender.currentTitle!) ?? .Su)
+        print(daysArray)
     }
     
     /*

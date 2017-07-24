@@ -14,7 +14,6 @@ class ResetPasswordViewController: UIViewController {
     // MARK: - IBOutlet
     @IBOutlet weak var emailTextField: UITextField!
     
-    
     // MARK: - IBAction
     @IBAction func resetPassword(sender: UIButton) {
         // Validate the input
@@ -50,7 +49,6 @@ class ResetPasswordViewController: UIViewController {
         })
     }
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -65,7 +63,6 @@ class ResetPasswordViewController: UIViewController {
     }
     
     // MARK: - Navigation
-
 
 }
 
