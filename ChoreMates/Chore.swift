@@ -10,8 +10,8 @@ import Foundation
 
 enum Day: String {
     case Su, M, Tu, W, Th, F, S
+    
 }
-
 
 class Chore {
     // all the things that can be edited for the chore, such as date & title of chore, person responsible for a chore
@@ -23,6 +23,11 @@ class Chore {
             self.chore = chore
             self.user = user
             self.days = days
+        
+        let day = Day.Su
+        let rawDay = day.rawValue
+        
+        
     }
 }
 

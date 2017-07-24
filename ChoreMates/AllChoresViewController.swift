@@ -13,8 +13,14 @@ class AllChoresViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     
-    var myOwnChoresArray = [Chore]()
-    var otherChoresArray = [Chore]()
+    var myOwnChoresArray: [Chore] = [Chore(chore: "do chore 0", user: User(), days: [.Su]),
+                                     Chore(chore: "do chore 1", user: User(), days: [.M, .W]),
+                                     Chore(chore: "do chore 2", user: User(), days: [.Th])]
+    
+    var otherChoresArray: [Chore] = [Chore(chore: "do chore 0 other user", user: User(), days: [.Th, .F]),
+                                     Chore(chore: "do chore 1 other user", user: User(), days: [.M, .Th]),
+                                     Chore(chore: "do chore 2 other user", user: User(), days: [.S]),
+                                     Chore(chore: "do chore 3 other user", user: User(), days: [.Su])]
     
     // array of chores
     // link all of the things
@@ -41,15 +47,38 @@ class AllChoresViewController: UIViewController {
 
 extension AllChoresViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        
+        if section == 0 {
+            return myOwnChoresArray.count
+        } else if section == 1 {
+            return otherChoresArray.count
+        } else {
+            return 0
+        }
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "postChoreCell", for: indexPath) as! ChoreTableViewCell
 
         // I could use arryas of choreTitles, dueDates, use indexPath for the each text/date.u
-        cell.choreTitleLabel.text = "Do dishes"
-        cell.dueDateLabel.text = "Tu"
+//        cell.choreTitleLabel.text = "Do dishes"
+//        cell.dueDateLabel.text = "Tu"
+        
+       //  String()
+        
+        if indexPath.section == 0 {
+            cell.choreTitleLabel.text = myOwnChoresArray[indexPath.row].chore
+          //   cell.dueDateLabel.text = String(  myOwnChoresArray[indexPath.row].days) //joined()
+            // cell.dueDateLabel.text = myOwnChoresArray[indexPath.row].days
+        } else if indexPath.section == 1 {
+            cell.choreTitleLabel.text = otherChoresArray[indexPath.row].chore
+            // cell.dueDateLabel.text = otherChoresArray[indexPath.row].days
+        }
+        
 
         return cell
     }

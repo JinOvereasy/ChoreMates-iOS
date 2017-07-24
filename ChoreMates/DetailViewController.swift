@@ -23,7 +23,6 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 
     
     // MARK: - IBAction
-    
     @IBAction func selectPerson(_ sender: UIButton) {
         chosenPersonLabel.text = pickerData[placementAnswer]
     }
@@ -32,12 +31,18 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 
         sender.isSelected = !sender.isSelected
         
-        if sender.isSelected != true {
-            // daysArray.remove(Day(rawValue: sender.currentTitle) ?? .Su)
-            // daysArray.remove(at: Day(rawValue: sender.currentTitle))
-        }
-        
-        daysArray.append(Day(rawValue: sender.currentTitle!) ?? .Su)
+        if let day = Day(rawValue: sender.currentTitle!) {
+            if sender.isSelected != true {
+                // daysArray.remove(Day(rawValue: sender.currentTitle) ?? .Su)
+                if let index = daysArray.index(of: day) {
+                    daysArray.remove(at: index)
+                }
+                
+            } else {
+                // daysArray.append(Day(rawValue: sender.currentTitle!) ?? .Su)
+                daysArray.append(day)
+            }
+        } 
         print(daysArray)
     }
     
@@ -86,15 +91,24 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         placementAnswer = row
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "Update" {
+            if let chore = chore {
+                print("SAVE TO FIREBASE")
+            } else {
+                print("SAVE NEW TO FIREBASE")
+            }
+        
+        }
     }
-    */
+
 
 }
 
