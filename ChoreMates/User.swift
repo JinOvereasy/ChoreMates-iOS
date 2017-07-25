@@ -9,5 +9,6 @@
 import Foundation
 
 class User: NSObject {
+var email = ""
     
 }

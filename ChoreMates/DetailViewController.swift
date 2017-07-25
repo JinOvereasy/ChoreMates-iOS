@@ -21,14 +21,12 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     @IBOutlet weak var personPicker: UIPickerView!
     @IBOutlet weak var chosenPersonLabel: UILabel!
 
-    
     // MARK: - IBAction
     @IBAction func selectPerson(_ sender: UIButton) {
         chosenPersonLabel.text = pickerData[placementAnswer]
     }
     
     @IBAction func dayButtonClicked(_ sender: UIButton) {
-
         sender.isSelected = !sender.isSelected
         
         if let day = Day(rawValue: sender.currentTitle!) {
@@ -37,12 +35,11 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                 if let index = daysArray.index(of: day) {
                     daysArray.remove(at: index)
                 }
-                
             } else {
                 // daysArray.append(Day(rawValue: sender.currentTitle!) ?? .Su)
                 daysArray.append(day)
             }
-        } 
+        }
         print(daysArray)
     }
     
@@ -105,10 +102,8 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             } else {
                 print("SAVE NEW TO FIREBASE")
             }
-        
         }
     }
-
 
 }
 

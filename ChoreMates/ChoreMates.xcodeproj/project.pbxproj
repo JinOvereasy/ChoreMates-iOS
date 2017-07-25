@@ -53,7 +53,7 @@
 		0E0434241F17E341005E6AF3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0E0434261F17E3BB005E6AF3 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		0E3F9D951F1EC96400C8A3AA /* NextDueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextDueViewController.swift; sourceTree = "<group>"; };
-		0EA6C3781F1FC09F008D0A73 /* ChoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChoreTableViewCell.swift; path = ChoreMates/ChoreTableViewCell.swift; sourceTree = "<group>"; };
+		0EA6C3781F1FC09F008D0A73 /* ChoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoreTableViewCell.swift; sourceTree = "<group>"; };
 		0EA6C37B1F1FC29C008D0A73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ChoreMates/Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		0EA6C37D1F1FC348008D0A73 /* Chores.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chores.storyboard; sourceTree = "<group>"; };
 		0EA6C37F1F211EC0008D0A73 /* ChoreService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoreService.swift; sourceTree = "<group>"; };
@@ -100,10 +100,10 @@
 				0E0433AE1F141BE3005E6AF3 /* AppDelegate.swift */,
 				0E0433C51F15322E005E6AF3 /* View Controllers */,
 				0E0433C71F153239005E6AF3 /* Storyboards */,
+				0E0433C61F153233005E6AF3 /* Models */,
 				0E0433C31F153220005E6AF3 /* Services */,
 				0E0433D51F153498005E6AF3 /* Views */,
 				0E0433C41F153228005E6AF3 /* Helpers */,
-				0E0433C61F153233005E6AF3 /* Models */,
 				0E0433B81F141BE4005E6AF3 /* Assets.xcassets */,
 				0E0433B51F141BE4005E6AF3 /* ChoreMates.xcdatamodeld */,
 				0E0433C81F1532B5005E6AF3 /* Supporting */,
@@ -158,12 +158,11 @@
 		0E0433C71F153239005E6AF3 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				0EA6C37A1F1FC29C008D0A73 /* Login.storyboard */,
 				0E0433B21F141BE3005E6AF3 /* Main.storyboard */,
 				0EA6C37D1F1FC348008D0A73 /* Chores.storyboard */,
 				0E0433CD1F153395005E6AF3 /* AllChoresViewController.swift */,
-				0EA6C3781F1FC09F008D0A73 /* ChoreTableViewCell.swift */,
 				0EA6C3891F226B56008D0A73 /* DetailViewController.swift */,
-				0EA6C37A1F1FC29C008D0A73 /* Login.storyboard */,
 			);
 			name = Storyboards;
 			path = ..;
@@ -182,6 +181,7 @@
 		0E0433D51F153498005E6AF3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0EA6C3781F1FC09F008D0A73 /* ChoreTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";

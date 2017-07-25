@@ -70,7 +70,6 @@ class LogInViewController: UIViewController {
                 UIApplication.shared.keyWindow?.rootViewController = viewController
                 self.dismiss(animated: true, completion: nil)
             }
-            
         })
     }
     
