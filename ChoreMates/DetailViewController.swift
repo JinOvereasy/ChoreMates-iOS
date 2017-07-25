@@ -22,9 +22,9 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     @IBOutlet weak var chosenPersonLabel: UILabel!
 
     // MARK: - IBAction
-    @IBAction func selectPerson(_ sender: UIButton) {
-        chosenPersonLabel.text = pickerData[placementAnswer]
-    }
+//    @IBAction func selectPerson(_ sender: UIButton) {
+//        chosenPersonLabel.text = pickerData[placementAnswer]
+//    }
     
     @IBAction func dayButtonClicked(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
@@ -85,7 +85,7 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // This method is triggered whenever the user makes a change to the picker selection.
         // the parameter named row and component represents what was selected.
-        placementAnswer = row
+        chosenPersonLabel.text = pickerData[row]
     }
 
     
