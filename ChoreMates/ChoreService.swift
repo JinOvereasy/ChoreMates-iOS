@@ -9,5 +9,8 @@
 import Foundation
 
 struct ChoreService {
-
+    
+    static func getChores(completion: ([Chore]?) -> Void) {
+        
+    }
 }

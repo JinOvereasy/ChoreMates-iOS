@@ -18,14 +18,14 @@ class AllChoresViewController: UIViewController {
     
     let sectionTitle = ["My Chores", "Other's Chores"]
     
-    var myOwnChoresArray: [Chore] = [Chore(chore: "do chore 0", user: User(), days: [.Su]),
-                                     Chore(chore: "do chore 1", user: User(), days: [.M, .W]),
-                                     Chore(chore: "do chore 2", user: User(), days: [.Th])]
+    var myOwnChoresArray: [Chore] = [Chore(chore: "do chore 0", user: User(uid: "aksdjfkjsdhf", username: "first", groupID: "ios"), days: [.Su]),
+                                     Chore(chore: "do chore 1", user: User(uid: "aksdjfkjsdhf", username: "sec", groupID: "ios"), days: [.M, .W]),
+                                     Chore(chore: "do chore 2", user: User(uid: "aksdjfkjsdhf", username: "thr", groupID: "ios"), days: [.Th])]
     
-    var otherChoresArray: [Chore] = [Chore(chore: "do chore 0 other user", user: User(), days: [.Th, .F]),
-                                     Chore(chore: "do chore 1 other user", user: User(), days: [.M, .Th]),
-                                     Chore(chore: "do chore 2 other user", user: User(), days: [.S]),
-                                     Chore(chore: "do chore 3 other user", user: User(), days: [.Su])]
+    var otherChoresArray: [Chore] = [Chore(chore: "do chore 0 other user", user: User(uid: "aksdjfkjsdhf", username: "four", groupID: "ios"), days: [.Th, .F]),
+                                     Chore(chore: "do chore 1 other user", user: User(uid: "aksdjfkjsdhf", username: "five", groupID: "ios"), days: [.M, .Th]),
+                                     Chore(chore: "do chore 2 other user", user: User(uid: "aksdjfkjsdhf", username: "six", groupID: "ios"), days: [.S]),
+                                     Chore(chore: "do chore 3 other user", user: User(uid: "aksdjfkjsdhf", username: "sev", groupID: "ios"), days: [.Su])]
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,7 +8,19 @@
 
 import Foundation
 
-class User: NSObject {
-var email = ""
+class User {
+//    // MARK: - Properties
+    let uid: String
+    let username: String
+    let groupID: String
+    
+    static var currentUser: User?
+//
+//    // MARK: - Init
+    init(uid: String, username: String, groupID: String) {
+        self.uid = uid
+        self.username = username
+        self.groupID = groupID
+    }
     
 }

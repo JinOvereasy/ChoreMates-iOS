@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E040F261F29402B006C05EA /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E040F251F29402B006C05EA /* Group.swift */; };
+		0E040F281F294214006C05EA /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E040F271F294214006C05EA /* UserService.swift */; };
 		0E0433AF1F141BE3005E6AF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0433AE1F141BE3005E6AF3 /* AppDelegate.swift */; };
 		0E0433B41F141BE4005E6AF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E0433B21F141BE3005E6AF3 /* Main.storyboard */; };
 		0E0433B71F141BE4005E6AF3 /* ChoreMates.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E0433B51F141BE4005E6AF3 /* ChoreMates.xcdatamodeld */; };
@@ -24,7 +26,6 @@
 		0E0434251F17E341005E6AF3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0434241F17E341005E6AF3 /* SignUpViewController.swift */; };
 		0E0434271F17E3BB005E6AF3 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0434261F17E3BB005E6AF3 /* ResetPasswordViewController.swift */; };
 		0E3F9D961F1EC96400C8A3AA /* NextDueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3F9D951F1EC96400C8A3AA /* NextDueViewController.swift */; };
-		0E82A3CD1F27E5F500C55F80 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E82A3CC1F27E5F500C55F80 /* StorageService.swift */; };
 		0EA6C3791F1FC09F008D0A73 /* ChoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6C3781F1FC09F008D0A73 /* ChoreTableViewCell.swift */; };
 		0EA6C37C1F1FC29C008D0A73 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA6C37A1F1FC29C008D0A73 /* Login.storyboard */; };
 		0EA6C37E1F1FC348008D0A73 /* Chores.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA6C37D1F1FC348008D0A73 /* Chores.storyboard */; };
@@ -35,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E040F251F29402B006C05EA /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		0E040F271F294214006C05EA /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		0E0433AB1F141BE3005E6AF3 /* ChoreMates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChoreMates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E0433AE1F141BE3005E6AF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E0433B31F141BE3005E6AF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,7 +57,6 @@
 		0E0434241F17E341005E6AF3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0E0434261F17E3BB005E6AF3 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		0E3F9D951F1EC96400C8A3AA /* NextDueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextDueViewController.swift; sourceTree = "<group>"; };
-		0E82A3CC1F27E5F500C55F80 /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		0EA6C3781F1FC09F008D0A73 /* ChoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoreTableViewCell.swift; sourceTree = "<group>"; };
 		0EA6C37B1F1FC29C008D0A73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ChoreMates/Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		0EA6C37D1F1FC348008D0A73 /* Chores.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chores.storyboard; sourceTree = "<group>"; };
@@ -118,7 +120,7 @@
 			children = (
 				0EA6C37F1F211EC0008D0A73 /* ChoreService.swift */,
 				0EA6C3811F211EC8008D0A73 /* GroupService.swift */,
-				0E82A3CC1F27E5F500C55F80 /* StorageService.swift */,
+				0E040F271F294214006C05EA /* UserService.swift */,
 			);
 			name = Services;
 			path = ..;
@@ -153,6 +155,7 @@
 			children = (
 				0E0433D61F153892005E6AF3 /* User.swift */,
 				0E0433DA1F153B2B005E6AF3 /* Chore.swift */,
+				0E040F251F29402B006C05EA /* Group.swift */,
 			);
 			name = Models;
 			path = ..;
@@ -340,12 +343,13 @@
 				0E0433D41F153404005E6AF3 /* MainTabBarController.swift in Sources */,
 				0E0433CC1F15335E005E6AF3 /* LogInViewController.swift in Sources */,
 				0E0433DD1F153E53005E6AF3 /* HousematesViewController.swift in Sources */,
-				0E82A3CD1F27E5F500C55F80 /* StorageService.swift in Sources */,
 				0E0434251F17E341005E6AF3 /* SignUpViewController.swift in Sources */,
 				0E0433CE1F153395005E6AF3 /* AllChoresViewController.swift in Sources */,
+				0E040F261F29402B006C05EA /* Group.swift in Sources */,
 				0EA6C38A1F226B56008D0A73 /* DetailViewController.swift in Sources */,
 				0E0433D71F153892005E6AF3 /* User.swift in Sources */,
 				0EA6C3791F1FC09F008D0A73 /* ChoreTableViewCell.swift in Sources */,
+				0E040F281F294214006C05EA /* UserService.swift in Sources */,
 				0E0434271F17E3BB005E6AF3 /* ResetPasswordViewController.swift in Sources */,
 				0E0433AF1F141BE3005E6AF3 /* AppDelegate.swift in Sources */,
 				0EA6C3821F211EC8008D0A73 /* GroupService.swift in Sources */,

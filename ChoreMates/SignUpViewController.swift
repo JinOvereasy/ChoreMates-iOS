@@ -61,6 +61,9 @@ class SignUpViewController: UIViewController {
             let alertController = UIAlertController(title: "Email Verification", message: "We've just sent a confirmation email to your email address. Please check your inbox and click the verification link in that email to complete the sign up.", preferredStyle: .alert)
             let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: { (action) in
                 // Dissmiss the current view controller
+                
+                // USER SERVICE CREATE USER
+                
                 self.dismiss(animated: true, completion: nil)
             })
             alertController.addAction(okayAction)
