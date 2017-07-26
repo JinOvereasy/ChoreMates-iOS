@@ -51,13 +51,10 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     // MARK: - Layout
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
-        // Connet data:
         self.personPicker.delegate = self
         self.personPicker.dataSource = self
         
-        // Input the data into the Array:
         pickerData = ["Will", "Jeff", "Jin", "Su"]
     }
     

@@ -8,7 +8,10 @@
 
 import UIKit
 
+
 class AllChoresViewController: UIViewController {
+    
+   // let ref = FIRDatabase.database().reference(withPath:"chore-items")
 
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
@@ -40,7 +43,6 @@ class AllChoresViewController: UIViewController {
     }
     
     // MARK: - Navigation
-
 }
 
 extension AllChoresViewController: UITableViewDataSource {
