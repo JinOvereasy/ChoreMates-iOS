@@ -14,10 +14,9 @@ class User {
     let uid: String
     let username: String
     let groupID: String
-    
     static var currentUser: User?
-//
-//    // MARK: - Init
+    
+// MARK: - Init
     init(uid: String, username: String, groupID: String) {
         self.uid = uid
         self.username = username
@@ -35,4 +34,13 @@ class User {
         self.init(uid: snapshot.key, username: username, groupID: groupID)
     }
     
+//    class func setCurrent(_ user: User, writeToUserDefaults: Bool = false) {
+//        if writeToUserDefaults {
+//            let data = NSKeyedArchiver.archivedData(withRootObject: user)
+//            UserDefaults.standard.set(data, forKey: currentUser?)
+//        }
+//        currentUser = user
+//    }
+    
 }
+

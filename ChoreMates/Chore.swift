@@ -10,11 +10,9 @@ import Foundation
 
 enum Day: String {
     case Su, M, Tu, W, Th, F, S
-    
 }
 
 class Chore {
-    
     var chore: String
     var user: User
     var days: [Day]
@@ -26,8 +24,6 @@ class Chore {
         
         let day = Day.Su
         let rawDay = day.rawValue
-        
-        
     }
 }
 

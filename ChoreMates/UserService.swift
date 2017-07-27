@@ -15,7 +15,6 @@ typealias FIRUser = FirebaseAuth.User
 struct UserService {
     static func create(_ firUser: FIRUser, username: String, groupID: String, completion: @escaping (User?) -> Void) {
         let userAttrs = ["username": username, "groupID": groupID]
-        
         let ref = Database.database().reference().child("users").child(firUser.uid)
         ref.setValue(userAttrs) { (error, ref) in
             if let error = error {
@@ -37,6 +36,10 @@ struct UserService {
             }
             completion(user)
         })
+    }
+    
+    static func createGroup() {
+    
     }
 
 }

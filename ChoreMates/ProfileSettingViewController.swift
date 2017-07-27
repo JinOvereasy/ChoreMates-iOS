@@ -26,13 +26,11 @@ class ProfileSettingViewController: UIViewController {
             
             return
         }
-        
         // Present the LoginView, instead ofwelcome view. since i don't have welcome view
         if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginView") {
             UIApplication.shared.keyWindow?.rootViewController = viewController
             self.dismiss(animated: true, completion: nil)
         }
-        
     }
     
     override func viewDidLoad() {
@@ -50,5 +48,8 @@ class ProfileSettingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
 }
+
+
+
+

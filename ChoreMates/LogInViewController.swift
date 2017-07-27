@@ -16,7 +16,6 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
 
-    
     // MARK: - IBAction
     @IBAction func unwindtoWelcomeView(segue: UIStoryboardSegue) {
         dismiss(animated: true, completion: nil)
@@ -33,7 +32,6 @@ class LogInViewController: UIViewController {
                 
                 return
         }
-        
         // Perform login by calling Firebase APIs
         Auth.auth().signIn(withEmail: emailAddress, password: password, completion: {
             (user, error) in
@@ -45,7 +43,6 @@ class LogInViewController: UIViewController {
                 
                 return
             }
-            
             // Email verification
             guard let currentUser = user, currentUser.isEmailVerified else {
                 let alertController = UIAlertController(title: "Login Error", message: "You haven't confirmed your email address yet. We sent you a confirmation email when you sign up. Please click the verification link in that email. If you need us to send the confirmation email again, please tap Resent email.", preferredStyle: .alert)
@@ -70,6 +67,21 @@ class LogInViewController: UIViewController {
                 UIApplication.shared.keyWindow?.rootViewController = viewController
                 self.dismiss(animated: true, completion: nil)
             }
+          
+//            UserService.show(forUID: (user?.uid)!) { (user) in
+//                if var user = user {
+//                    // handle existing user
+//                    user = User.currentUser
+//                    
+//                    let initialViewController = UIStoryboard.initialViewController(for: .Main)
+//                    self.view.window?.rootViewController = initialViewController
+//                    self.view.window?.makeKeyAndVisible()
+//                } else {
+//                    // handle new user
+//                    self.performSegue(withIdentifier: Constants.Segue.toCreateUsername, sender: self)
+//                }
+//            }
+            
         })
     }
     

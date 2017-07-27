@@ -9,14 +9,7 @@
 import Foundation
 
 class Group {
-    
     var id: String = ""
     var users: [User] = []
     var chores: [Chore] = []
-    
-    
-    
-    
-    
-    
 }

@@ -12,7 +12,6 @@ import UIKit
 class AllChoresViewController: UIViewController {
     
    // let ref = FIRDatabase.database().reference(withPath:"chore-items")
-
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     
@@ -74,17 +73,9 @@ extension AllChoresViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "postChoreCell", for: indexPath) as! ChoreTableViewCell
             // cell.choreTitleLabel.text = "Do dishes"
             // cell.dueDateLabel.text = "Tu"
-        
         if indexPath.section == 0 {
             cell.choreTitleLabel.text = myOwnChoresArray[indexPath.row].chore
             cell.dueDateLabel.text = "\(myOwnChoresArray[indexPath.row].days.map({ $0.rawValue }).joined(separator: ", "))"
-            
-            // none of these below worked.
-            // 1. cell.dueDateLabel.text = (myOwnChoresArray[indexPath.row].days).joined(separator: "-")
-            // 2. cell.dueDateLabel.text = String(myOwnChoresArray[indexPath.row].days)
-            // 3. cell.dueDateLabel.text = String((myOwnChoresArray[indexPath.row].days).flatMap { ($0 as? String)?.characters.first })
-            // 4. cell.dueDateLabel.text = "-".join(myOwnChoresArray[indexPath.row].days)
-            
         } else if indexPath.section == 1 {
             cell.choreTitleLabel.text = otherChoresArray[indexPath.row].chore
             cell.dueDateLabel.text = "\(otherChoresArray[indexPath.row].days.map({ $0.rawValue }).joined(separator: ", "))"

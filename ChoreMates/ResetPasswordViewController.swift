@@ -44,7 +44,6 @@ class ResetPasswordViewController: UIViewController {
                 }
             })
             alertController.addAction(okayAction)
-        
             self.present(alertController, animated: true, completion: nil)
         })
     }
@@ -63,7 +62,6 @@ class ResetPasswordViewController: UIViewController {
     }
     
     // MARK: - Navigation
-
 }
 
 
