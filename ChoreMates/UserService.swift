@@ -14,7 +14,6 @@ typealias FIRUser = FirebaseAuth.User
 
 struct UserService {
     static func create(_ firUser: FIRUser, username: String, groupID: String, completion: @escaping (User?) -> Void) {
-        
         let userAttrs = ["username": username, "groupID": groupID]
         
         let ref = Database.database().reference().child("users").child(firUser.uid)
@@ -23,12 +22,21 @@ struct UserService {
                 assertionFailure(error.localizedDescription)
                 return completion(nil)
             }
-            
             ref.observeSingleEvent(of: .value, with: { (snapshot) in
-//                let user = User(snapshot: snapshot)
-//                completion(user)
+                let user = User(snapshot: snapshot)
+                completion(user)
             })
         }
+    }
+    
+    static func show(forUID uid: String, completion: @escaping (User?) -> Void) {
+        let ref = Database.database().reference().child("users").child(uid)
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let user = User(snapshot: snapshot) else {
+                return completion(nil)
+            }
+            completion(user)
+        })
     }
 
 }

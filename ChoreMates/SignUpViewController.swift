@@ -12,14 +12,16 @@ import Firebase
 class SignUpViewController: UIViewController {
 
     // MARK: - IBOutlets
-    @IBOutlet weak var nameTextField: UITextField!
+    
+    @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var groupIDTextField: UITextField!
     
     // MARK: - IBActions
     @IBAction func registerAccount(sender: UIButton) {
         // Validate the input
-        guard let name = nameTextField.text, name != "",
+        guard let name = userNameTextField.text, name != "",
         let emailAddress = emailTextField.text, emailAddress != "",
         let password = passwordTextField.text, password != "" else {
             
@@ -63,8 +65,13 @@ class SignUpViewController: UIViewController {
                 // Dissmiss the current view controller
                 
                 // USER SERVICE CREATE USER
+                UserService.create(user!, username: self.userNameTextField.text!, groupID: self.groupIDTextField.text!, completion: { (newUser) in
+                    
+                    self.dismiss(animated: true, completion: nil)
+
+                })
                 
-                self.dismiss(animated: true, completion: nil)
+                
             })
             alertController.addAction(okayAction)
             self.present(alertController, animated: true, completion: nil)
@@ -75,7 +82,7 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        nameTextField.becomeFirstResponder()
+        userNameTextField.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {

@@ -77,6 +77,17 @@ class LogInViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        // Hide the navigation bar on the this view controller
+        // Hide the navigation bar for current view controller
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Show the navigation bar on other view controllers
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        // or   self.navigationController?.isNavigationBarHidden = false
     }
 
     override func didReceiveMemoryWarning() {

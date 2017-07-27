@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseDatabase.FIRDataSnapshot
 
 class User {
 //    // MARK: - Properties
@@ -21,6 +22,17 @@ class User {
         self.uid = uid
         self.username = username
         self.groupID = groupID
+        
+        User.currentUser = self
+    }
+    
+    convenience init?(snapshot: DataSnapshot) {
+        guard let dict = snapshot.value as? [String : Any],
+            let username = dict["username"] as? String,
+            let groupID = dict["groupID"] as? String
+            else { return nil}
+
+        self.init(uid: snapshot.key, username: username, groupID: groupID)
     }
     
 }
