@@ -22,8 +22,13 @@ struct UserService {
                 return completion(nil)
             }
             ref.observeSingleEvent(of: .value, with: { (snapshot) in
-                let user = User(snapshot: snapshot)
-                completion(user)
+                guard let user = User(snapshot: snapshot) else {
+                    return completion(nil)
+                }
+                GroupService.addUserToGroup(user, groupID: groupID, completion: { (user) in
+                    completion(user)
+                })
+                
             })
         }
     }
@@ -37,9 +42,4 @@ struct UserService {
             completion(user)
         })
     }
-    
-    static func createGroup() {
-    
-    }
-
 }

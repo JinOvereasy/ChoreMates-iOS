@@ -25,7 +25,6 @@ class AllChoresViewController: UIViewController {
                                      Chore(chore: "do chore 1 other user", user: User(uid: "aksdjfkjsdhf", username: "five", groupID: "ios"), days: [.M, .Th]),
                                      Chore(chore: "do chore 2 other user", user: User(uid: "aksdjfkjsdhf", username: "six", groupID: "ios"), days: [.S]),
                                      Chore(chore: "do chore 3 other user", user: User(uid: "aksdjfkjsdhf", username: "sev", groupID: "ios"), days: [.Su])]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -92,11 +91,6 @@ extension AllChoresViewController: UITableViewDelegate {
     }
     
 }
-
-
-
-
-
 
 
 

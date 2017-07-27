@@ -9,7 +9,6 @@
 import UIKit
 
 class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-
     var chore: Chore?
     var daysArray: [Day] = [Day]()
     var pickerData: [String] = [String]()
@@ -42,7 +41,6 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     // MARK: - Layout
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.personPicker.delegate = self
         self.personPicker.dataSource = self
         
@@ -70,7 +68,6 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         chosenPersonLabel.text = pickerData[row]
     }
 
-    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.

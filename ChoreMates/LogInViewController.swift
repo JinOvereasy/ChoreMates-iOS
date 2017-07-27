@@ -12,6 +12,8 @@ import FirebaseAuthUI
 
 class LogInViewController: UIViewController {
     
+    var window: UIWindow?
+    
     // MARK: - IBOutlets
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -68,19 +70,24 @@ class LogInViewController: UIViewController {
                 self.dismiss(animated: true, completion: nil)
             }
           
-//            UserService.show(forUID: (user?.uid)!) { (user) in
-//                if var user = user {
-//                    // handle existing user
-//                    user = User.currentUser
-//                    
-//                    let initialViewController = UIStoryboard.initialViewController(for: .Main)
-//                    self.view.window?.rootViewController = initialViewController
-//                    self.view.window?.makeKeyAndVisible()
-//                } else {
-//                    // handle new user
-//                    self.performSegue(withIdentifier: Constants.Segue.toCreateUsername, sender: self)
-//                }
-//            }
+            UserService.show(forUID: (user?.uid)!) { (user) in
+                if let user = user {
+                    // handle existing user
+                    User.currentUser! = user
+                    
+                    let storyboard = UIStoryboard(name: "Main", bundle: .main)
+                    if let initialViewController = storyboard.instantiateInitialViewController() {
+                        self.window?.rootViewController = initialViewController
+                        self.window?.makeKeyAndVisible()
+                    }
+                } else {
+                    // handle new user
+                    let signUpBoard = UIStoryboard(name: "Login", bundle: .main)
+                    let initialViewController = signUpBoard.instantiateViewController(withIdentifier: "SignUpView")
+                    self.window?.rootViewController = initialViewController
+                    self.window?.makeKeyAndVisible()
+                }
+            }
             
         })
     }
@@ -109,7 +116,6 @@ class LogInViewController: UIViewController {
 
     
     // MARK: - Navigation
-
 }
 
 

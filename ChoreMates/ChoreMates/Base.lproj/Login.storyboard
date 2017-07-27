@@ -152,7 +152,7 @@
         <!--Sign Up-->
         <scene sceneID="d0e-GU-NjV">
             <objects>
-                <viewController id="lwc-Yn-oZH" customClass="SignUpViewController" customModule="ChoreMates" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lwc-Yn-oZH" customClass="SignUpViewController" customModule="ChoreMates" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UIq-lb-1fB"/>
                         <viewControllerLayoutGuide type="bottom" id="30D-nJ-kKs"/>

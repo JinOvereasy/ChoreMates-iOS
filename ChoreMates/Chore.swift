@@ -16,11 +16,13 @@ class Chore {
     var chore: String
     var user: User
     var days: [Day]
+    var completed: Bool
     
-    init(chore: String, user: User, days: [Day]) {
+    init(chore: String, user: User, days: [Day], completed: Bool) {
         self.chore = chore
         self.user = user
         self.days = days
+        self.completed = completed
         
         let day = Day.Su
         let rawDay = day.rawValue
