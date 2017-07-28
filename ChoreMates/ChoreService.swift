@@ -12,12 +12,14 @@ import FirebaseDatabase
 
 struct ChoreService {
     
-    /*
-    static func addUserToGroup(_ user: User, groupID: String, completion: @escaping (User?) -> Void) {
-        let groupAttrs = [groupID: [user.uid: user.username]]
-        let ref = Database.database().reference().child("groups")
+    static func addChores(_ user: User, groupID: String, chore: Chore, days: [Day], completion: @escaping (User?) -> Void) {
         
-        ref.setValue(groupAttrs) { (error, ref) in
+        let choreAttrs = ["name/title": chore, "user" : user.username, "day of the week" : days] as [String : Any]
+        let ref = Database.database().reference().child("chores").child(groupID).childByAutoId()
+        
+        ref.updateChildValues(choreAttrs)
+        
+        ref.setValue(choreAttrs) { (error, ref) in
             if let error = error {
                 assertionFailure(error.localizedDescription)
                 return completion(nil)
@@ -27,12 +29,9 @@ struct ChoreService {
                 completion(user)
             })
         }
-    }
-    */
-    
-    static func addChores(completion: ([Chore]?) -> Void) {
         
     }
+    
     
     static func getChores(completion: ([Chore]?) -> Void) {
         
@@ -41,10 +40,11 @@ struct ChoreService {
     static func deleteChores(completion: ([Chore]?) -> Void) {
         
     }
+    
 }
 
 
-
+/* add the Bool on line 17, let choreAttrs    after -> completed: completed */
 
 
 

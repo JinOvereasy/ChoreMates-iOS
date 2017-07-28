@@ -16,16 +16,29 @@ class Chore {
     var chore: String
     var user: User
     var days: [Day]
-    var completed: Bool
+    let uid: String?
     
-    init(chore: String, user: User, days: [Day], completed: Bool) {
+    // var completed: Bool
+    
+    init(chore: String, user: User, days: [Day], uid: String /*, completed: Bool */) {
         self.chore = chore
         self.user = user
         self.days = days
-        self.completed = completed
+        self.uid = uid
+        // self.completed = completed
         
         let day = Day.Su
         let rawDay = day.rawValue
     }
+    
+//    convenience init?(snapshot: DataSnapshot) {
+//        guard let dict = snapshot.value as? [String : Any],
+//            let username = dict["username"] as? String,
+//            let groupID = dict["groupID"] as? String
+//            else { return nil}
+//        
+//        self.init(uid: snapshot.key, username: username, groupID: groupID)
+//    }
+    
 }
 

@@ -17,7 +17,7 @@ class LogInViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-
+    
     // MARK: - IBAction
     @IBAction func unwindtoWelcomeView(segue: UIStoryboardSegue) {
         dismiss(animated: true, completion: nil)
@@ -48,14 +48,12 @@ class LogInViewController: UIViewController {
             // Email verification
             guard let currentUser = user, currentUser.isEmailVerified else {
                 let alertController = UIAlertController(title: "Login Error", message: "You haven't confirmed your email address yet. We sent you a confirmation email when you sign up. Please click the verification link in that email. If you need us to send the confirmation email again, please tap Resent email.", preferredStyle: .alert)
-                
                 let okayAction = UIAlertAction(title: "Resent email", style: .default, handler: { (action) in
-                        user?.sendEmailVerification(completion: nil)
+                    user?.sendEmailVerification(completion: nil)
                 })
                 let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
                 alertController.addAction(okayAction)
                 alertController.addAction(cancelAction)
-                
                 self.present(alertController, animated: true, completion: nil)
                 
                 return
@@ -69,12 +67,11 @@ class LogInViewController: UIViewController {
                 UIApplication.shared.keyWindow?.rootViewController = viewController
                 self.dismiss(animated: true, completion: nil)
             }
-          
+            
             UserService.show(forUID: (user?.uid)!) { (user) in
                 if let user = user {
                     // handle existing user
                     User.currentUser! = user
-                    
                     let storyboard = UIStoryboard(name: "Main", bundle: .main)
                     if let initialViewController = storyboard.instantiateInitialViewController() {
                         self.window?.rootViewController = initialViewController
@@ -88,33 +85,28 @@ class LogInViewController: UIViewController {
                     self.window?.makeKeyAndVisible()
                 }
             }
-            
         })
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
-        // Hide the navigation bar on the this view controller
         // Hide the navigation bar for current view controller
         self.navigationController?.isNavigationBarHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
         // Show the navigation bar on other view controllers
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
         // or   self.navigationController?.isNavigationBarHidden = false
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-    
     // MARK: - Navigation
 }
 

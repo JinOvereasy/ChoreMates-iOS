@@ -17,14 +17,14 @@ class AllChoresViewController: UIViewController {
     
     let sectionTitle = ["My Chores", "Other's Chores"]
     
-    var myOwnChoresArray: [Chore] = [Chore(chore: "do chore 0", user: User(uid: "aksdjfkjsdhf", username: "first", groupID: "ios"), days: [.Su]),
-                                     Chore(chore: "do chore 1", user: User(uid: "aksdjfkjsdhf", username: "sec", groupID: "ios"), days: [.M, .W]),
-                                     Chore(chore: "do chore 2", user: User(uid: "aksdjfkjsdhf", username: "thr", groupID: "ios"), days: [.Th])]
+    var myOwnChoresArray: [Chore] = [Chore(chore: "do chore 0", user: User(uid: "aksdjfkjsdhf", username: "first", groupID: "ios"), days: [.Su], uid: "uidChore"),
+                                     Chore(chore: "do chore 1", user: User(uid: "aksdjfkjsdhf", username: "sec", groupID: "ios"), days: [.M, .W], uid: "uidChore"),
+                                     Chore(chore: "do chore 2", user: User(uid: "aksdjfkjsdhf", username: "thr", groupID: "ios"), days: [.Th], uid: "uidChore")]
     
-    var otherChoresArray: [Chore] = [Chore(chore: "do chore 0 other user", user: User(uid: "aksdjfkjsdhf", username: "four", groupID: "ios"), days: [.Th, .F]),
-                                     Chore(chore: "do chore 1 other user", user: User(uid: "aksdjfkjsdhf", username: "five", groupID: "ios"), days: [.M, .Th]),
-                                     Chore(chore: "do chore 2 other user", user: User(uid: "aksdjfkjsdhf", username: "six", groupID: "ios"), days: [.S]),
-                                     Chore(chore: "do chore 3 other user", user: User(uid: "aksdjfkjsdhf", username: "sev", groupID: "ios"), days: [.Su])]
+    var otherChoresArray: [Chore] = [Chore(chore: "do chore 0 other user", user: User(uid: "aksdjfkjsdhf", username: "four", groupID: "ios"), days: [.Th, .F], uid: "uidChore"),
+                                     Chore(chore: "do chore 1 other user", user: User(uid: "aksdjfkjsdhf", username: "five", groupID: "ios"), days: [.M, .Th], uid: "uidChore"),
+                                     Chore(chore: "do chore 2 other user", user: User(uid: "aksdjfkjsdhf", username: "six", groupID: "ios"), days: [.S], uid: "uidChore"),
+                                     Chore(chore: "do chore 3 other user", user: User(uid: "aksdjfkjsdhf", username: "sev", groupID: "ios"), days: [.Su], uid: "uidChore")]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -83,6 +83,12 @@ extension AllChoresViewController: UITableViewDataSource {
             }
         return cell
     }
+    
+    
+    
+
+
+    
 }
 
 extension AllChoresViewController: UITableViewDelegate {

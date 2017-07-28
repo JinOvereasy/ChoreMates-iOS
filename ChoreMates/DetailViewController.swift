@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import FirebaseStorage
+import FirebaseDatabase
+
 
 class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     var chore: Chore?
@@ -23,7 +26,6 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     // MARK: - IBAction
     @IBAction func dayButtonClicked(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
-        
         if let day = Day(rawValue: sender.currentTitle!) {
             if sender.isSelected != true {
                 // daysArray.remove(Day(rawValue: sender.currentTitle) ?? .Su)
@@ -75,12 +77,19 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         if segue.identifier == "Update" {
             if let chore = chore {
                 print("SAVE TO FIREBASE")
+//                // call the addChores function in this VC, because the user presses the "Update" button
+//                    ChoreService.addChores(chosenPersonLabel.text, groupID: <#T##String#>, chore: choreTextField.text, days: daysArray, completion: { (user) in
+//                        completion(user)
+//                    })
+                
             } else {
                 print("SAVE NEW TO FIREBASE")
             }
         }
     }
 
+
+    
 }
 
 

@@ -10,9 +10,7 @@ import UIKit
 import Firebase
 
 class SignUpViewController: UIViewController {
-
     // MARK: - IBOutlets
-    
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -24,7 +22,6 @@ class SignUpViewController: UIViewController {
         guard let name = userNameTextField.text, name != "",
         let emailAddress = emailTextField.text, emailAddress != "",
         let password = passwordTextField.text, password != "" else {
-            
             let alertController = UIAlertController(title: "Registration Error", message: "Please make sure you provide your name, email address and password to complete the registration.", preferredStyle: .alert)
             let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(okayAction)
@@ -60,7 +57,6 @@ class SignUpViewController: UIViewController {
             
             let alertController = UIAlertController(title: "Email Verification", message: "We've just sent a confirmation email to your email address. Please check your inbox and click the verification link in that email to complete the sign up.", preferredStyle: .alert)
             let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: { (action) in
-                // Dissmiss the current view controller
                 // USER SERVICE CREATE USER
                 UserService.create(user!, username: self.userNameTextField.text!, groupID: self.groupIDTextField.text!, completion: { (newUser) in
                     self.dismiss(animated: true, completion: nil)
@@ -76,10 +72,12 @@ class SignUpViewController: UIViewController {
         // Do any additional setup after loading the view.
         userNameTextField.becomeFirstResponder()
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
 }
 

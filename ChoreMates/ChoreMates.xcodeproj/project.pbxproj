@@ -118,9 +118,9 @@
 		0E0433C31F153220005E6AF3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0E040F271F294214006C05EA /* UserService.swift */,
 				0EA6C37F1F211EC0008D0A73 /* ChoreService.swift */,
 				0EA6C3811F211EC8008D0A73 /* GroupService.swift */,
-				0E040F271F294214006C05EA /* UserService.swift */,
 			);
 			name = Services;
 			path = ..;
