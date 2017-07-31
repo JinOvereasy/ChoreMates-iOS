@@ -11,40 +11,49 @@ import Firebase
 import FirebaseDatabase
 
 struct ChoreService {
-    
-    static func addChores(_ user: User, groupID: String, chore: Chore, days: [Day], completion: @escaping (User?) -> Void) {
+    static func editChore(chore: Chore, completion: @escaping () -> Void) {
+        var days: [String: Bool] = [:]
+        for day in chore.days {
+            days[day.rawValue] = true
+        }
+        let title = chore.title
+        let choreuid = chore.uid
+        let user = chore.user
+        let groupID = user.groupID
+        let choreAttrs = ["title": title, "user_uid" : user.uid, "username": user.username, "day_of_the_week" : days] as [String : Any]
         
-        let choreAttrs = ["name/title": chore, "user" : user.username, "day of the week" : days] as [String : Any]
-        let ref = Database.database().reference().child("chores").child(groupID).childByAutoId()
-        
-        ref.updateChildValues(choreAttrs)
-        
-        ref.setValue(choreAttrs) { (error, ref) in
+        let ref: DatabaseReference
+        if let choreuid = choreuid {
+            ref = Database.database().reference().child("chores").child(groupID).child(choreuid)
+        } else {
+            ref = Database.database().reference().child("chores").child(groupID).childByAutoId()
+        }
+        ref.updateChildValues(choreAttrs, withCompletionBlock: { (error, ref) in
             if let error = error {
                 assertionFailure(error.localizedDescription)
-                return completion(nil)
+                return completion()
             }
-            ref.observeSingleEvent(of: .value, with: { (snapshot) in
-                let user = User(snapshot: snapshot)
-                completion(user)
-            })
-        }
+            completion()
+        })
+    }
+    
+    static func completeChore(chore: Chore, completion: () -> Void) {
         
     }
     
     
-    static func getChores(completion: ([Chore]?) -> Void) {
+    static func getChores( completion: ([Chore]?) -> Void) {
         
     }
     
-    static func deleteChores(completion: ([Chore]?) -> Void) {
+    
+    static func deleteChores(_ user: String, groupID: String, title: String, days: [Day], completion: ([Chore]?) -> Void) {
         
     }
-    
 }
 
 
-/* add the Bool on line 17, let choreAttrs    after -> completed: completed */
+/* add the Bool to check whether the task was complete/not on line 17, let choreAttrs after -> completed: completed */
 
 
 

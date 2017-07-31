@@ -13,22 +13,20 @@ enum Day: String {
 }
 
 class Chore {
-    var chore: String
+    var title: String
     var user: User
     var days: [Day]
     let uid: String?
-    
     // var completed: Bool
     
-    init(chore: String, user: User, days: [Day], uid: String /*, completed: Bool */) {
-        self.chore = chore
+    init(title: String, user: User, days: [Day], uid: String? /*, completed: Bool */) {
+        self.title = title
         self.user = user
         self.days = days
         self.uid = uid
         // self.completed = completed
-        
-        let day = Day.Su
-        let rawDay = day.rawValue
+        // let day = Day.Su
+        // let rawDay = day.rawValue
     }
     
 //    convenience init?(snapshot: DataSnapshot) {
@@ -41,4 +39,7 @@ class Chore {
 //    }
     
 }
+
+
+
 

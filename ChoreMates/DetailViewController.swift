@@ -10,11 +10,12 @@ import UIKit
 import FirebaseStorage
 import FirebaseDatabase
 
-
 class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     var chore: Chore?
     var daysArray: [Day] = [Day]()
     var pickerData: [String] = [String]()
+    
+    // var daysPickedHolder: [Day] = [Day]()
     var placementAnswer = 0
     
     // MARK: - IBOutlets
@@ -22,7 +23,7 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     @IBOutlet weak var assignChoreLabel: UILabel!
     @IBOutlet weak var personPicker: UIPickerView!
     @IBOutlet weak var chosenPersonLabel: UILabel!
-
+    
     // MARK: - IBAction
     @IBAction func dayButtonClicked(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
@@ -45,7 +46,6 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         super.viewDidLoad()
         self.personPicker.delegate = self
         self.personPicker.dataSource = self
-        
         pickerData = ["Will", "Jeff", "Jin", "Su"]
     }
     
@@ -69,27 +69,42 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         chosenPersonLabel.text = pickerData[row]
     }
-
+    
     // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        if segue.identifier == "Update" {
-            if let chore = chore {
-                print("SAVE TO FIREBASE")
-//                // call the addChores function in this VC, because the user presses the "Update" button
-//                    ChoreService.addChores(chosenPersonLabel.text, groupID: <#T##String#>, chore: choreTextField.text, days: daysArray, completion: { (user) in
-//                        completion(user)
-//                    })
-                
-            } else {
-                print("SAVE NEW TO FIREBASE")
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "Update" {
+            guard let choreTitle = choreTextField.text,
+                choreTitle != "",
+                let _ = User.currentUser,
+                daysArray.count > 0
+                else {
+                    let alertController = UIAlertController(title: "Blank fields", message: "Not all fields are populated or user did not sign in properly.", preferredStyle: .alert)
+                    let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alertController.addAction(okayAction)
+                    present(alertController, animated: true, completion: nil)
+                    return false
             }
         }
+        return true
     }
-
-
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "Update" {
+            guard let choreTitle = choreTextField.text,
+                let currentUser = User.currentUser
+                else {
+                    return
+            }
+            if chore == nil {
+                self.chore = Chore(title: choreTitle, user: currentUser, days: daysArray, uid: nil)
+            }
+            ChoreService.editChore(chore: chore!, completion: { (user) in
+            })
+        }
+        
+    }
 }
 
 

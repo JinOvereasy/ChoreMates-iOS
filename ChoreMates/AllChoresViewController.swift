@@ -10,24 +10,27 @@ import UIKit
 
 
 class AllChoresViewController: UIViewController {
-    
    // let ref = FIRDatabase.database().reference(withPath:"chore-items")
+    
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     
     let sectionTitle = ["My Chores", "Other's Chores"]
+    // var myOwnChoresArray: [Chore]()
+    // var otherChoresArray: [Chore]()
     
-    var myOwnChoresArray: [Chore] = [Chore(chore: "do chore 0", user: User(uid: "aksdjfkjsdhf", username: "first", groupID: "ios"), days: [.Su], uid: "uidChore"),
-                                     Chore(chore: "do chore 1", user: User(uid: "aksdjfkjsdhf", username: "sec", groupID: "ios"), days: [.M, .W], uid: "uidChore"),
-                                     Chore(chore: "do chore 2", user: User(uid: "aksdjfkjsdhf", username: "thr", groupID: "ios"), days: [.Th], uid: "uidChore")]
+    var myOwnChoresArray: [Chore] = [Chore(title: "do chore 0", user: User(uid: "aksdjfkjsdhf", username: "first", groupID: "ios"), days: [.Su], uid: "uidChore"),
+                                     Chore(title: "do chore 1", user: User(uid: "aksdjfkjsdhf", username: "sec", groupID: "ios"), days: [.M, .W], uid: "uidChore"),
+                                     Chore(title: "do chore 2", user: User(uid: "aksdjfkjsdhf", username: "thr", groupID: "ios"), days: [.Th], uid: "uidChore")]
     
-    var otherChoresArray: [Chore] = [Chore(chore: "do chore 0 other user", user: User(uid: "aksdjfkjsdhf", username: "four", groupID: "ios"), days: [.Th, .F], uid: "uidChore"),
-                                     Chore(chore: "do chore 1 other user", user: User(uid: "aksdjfkjsdhf", username: "five", groupID: "ios"), days: [.M, .Th], uid: "uidChore"),
-                                     Chore(chore: "do chore 2 other user", user: User(uid: "aksdjfkjsdhf", username: "six", groupID: "ios"), days: [.S], uid: "uidChore"),
-                                     Chore(chore: "do chore 3 other user", user: User(uid: "aksdjfkjsdhf", username: "sev", groupID: "ios"), days: [.Su], uid: "uidChore")]
+    var otherChoresArray: [Chore] = [Chore(title: "do chore 0 other user", user: User(uid: "aksdjfkjsdhf", username: "four", groupID: "ios"), days: [.Th, .F], uid: "uidChore"),
+                                     Chore(title: "do chore 1 other user", user: User(uid: "aksdjfkjsdhf", username: "five", groupID: "ios"), days: [.M, .Th], uid: "uidChore"),
+                                     Chore(title: "do chore 2 other user", user: User(uid: "aksdjfkjsdhf", username: "six", groupID: "ios"), days: [.S], uid: "uidChore"),
+                                     Chore(title: "do chore 3 other user", user: User(uid: "aksdjfkjsdhf", username: "sev", groupID: "ios"), days: [.Su], uid: "uidChore")]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,24 +73,17 @@ extension AllChoresViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "postChoreCell", for: indexPath) as! ChoreTableViewCell
-            // cell.choreTitleLabel.text = "Do dishes"
-            // cell.dueDateLabel.text = "Tu"
         if indexPath.section == 0 {
-            cell.choreTitleLabel.text = myOwnChoresArray[indexPath.row].chore
+            cell.choreTitleLabel.text = myOwnChoresArray[indexPath.row].title
             cell.dueDateLabel.text = "\(myOwnChoresArray[indexPath.row].days.map({ $0.rawValue }).joined(separator: ", "))"
         } else if indexPath.section == 1 {
-            cell.choreTitleLabel.text = otherChoresArray[indexPath.row].chore
+            cell.choreTitleLabel.text = otherChoresArray[indexPath.row].title
             cell.dueDateLabel.text = "\(otherChoresArray[indexPath.row].days.map({ $0.rawValue }).joined(separator: ", "))"
             } else {
                 cell.choreTitleLabel.text = "Empty Empty nil"
             }
         return cell
     }
-    
-    
-    
-
-
     
 }
 

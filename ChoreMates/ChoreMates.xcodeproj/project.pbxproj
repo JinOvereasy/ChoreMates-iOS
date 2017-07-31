@@ -129,8 +129,10 @@
 		0E0433C41F153228005E6AF3 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				0E0433D31F153404005E6AF3 /* MainTabBarController.swift */,
 				0E0434021F158621005E6AF3 /* TTTTrialViewController.swift */,
 				0E3F9D951F1EC96400C8A3AA /* NextDueViewController.swift */,
+				0E0433DC1F153E53005E6AF3 /* HousematesViewController.swift */,
 			);
 			name = Helpers;
 			path = ..;
@@ -143,8 +145,8 @@
 				0E0434241F17E341005E6AF3 /* SignUpViewController.swift */,
 				0E0433D11F1533B4005E6AF3 /* ProfileSettingViewController.swift */,
 				0E0434261F17E3BB005E6AF3 /* ResetPasswordViewController.swift */,
-				0E0433D31F153404005E6AF3 /* MainTabBarController.swift */,
-				0E0433DC1F153E53005E6AF3 /* HousematesViewController.swift */,
+				0E0433CD1F153395005E6AF3 /* AllChoresViewController.swift */,
+				0EA6C3891F226B56008D0A73 /* DetailViewController.swift */,
 			);
 			name = "View Controllers";
 			path = ..;
@@ -164,8 +166,6 @@
 		0E0433C71F153239005E6AF3 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				0E0433CD1F153395005E6AF3 /* AllChoresViewController.swift */,
-				0EA6C3891F226B56008D0A73 /* DetailViewController.swift */,
 				0EA6C37A1F1FC29C008D0A73 /* Login.storyboard */,
 				0E0433B21F141BE3005E6AF3 /* Main.storyboard */,
 				0EA6C37D1F1FC348008D0A73 /* Chores.storyboard */,

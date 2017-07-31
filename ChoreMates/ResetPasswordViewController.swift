@@ -21,7 +21,6 @@ class ResetPasswordViewController: UIViewController {
             emailAddress != "" else {
                 let alertController = UIAlertController(title: "Input Error", message: "Please provide your email address for password reset.", preferredStyle: .alert)
                 let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                
                 alertController.addAction(okayAction)
                 present(alertController, animated: true, completion: nil)
                 
@@ -50,7 +49,6 @@ class ResetPasswordViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         self.title = "Forgot Password"
         emailTextField.becomeFirstResponder()
@@ -60,7 +58,6 @@ class ResetPasswordViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     // MARK: - Navigation
 }
 

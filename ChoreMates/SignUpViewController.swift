@@ -10,6 +10,9 @@ import UIKit
 import Firebase
 
 class SignUpViewController: UIViewController {
+    
+    var globalGroupID = ""
+    
     // MARK: - IBOutlets
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -52,14 +55,18 @@ class SignUpViewController: UIViewController {
             // Dismiss keyboard
             self.view.endEditing(true)
             
-            // Send verification email
-            user?.sendEmailVerification(completion: nil)
+              // Send verification email
+              // user?.sendEmailVerification(completion: nil)
             
             let alertController = UIAlertController(title: "Email Verification", message: "We've just sent a confirmation email to your email address. Please check your inbox and click the verification link in that email to complete the sign up.", preferredStyle: .alert)
             let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: { (action) in
+                
+                
                 // USER SERVICE CREATE USER
                 UserService.create(user!, username: self.userNameTextField.text!, groupID: self.groupIDTextField.text!, completion: { (newUser) in
                     self.dismiss(animated: true, completion: nil)
+                    // get a global variable to store the groupID to be used in DetailViewController
+                    self.globalGroupID = self.groupIDTextField.text!
                 })
             })
             alertController.addAction(okayAction)
