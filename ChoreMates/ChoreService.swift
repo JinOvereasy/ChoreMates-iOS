@@ -37,24 +37,20 @@ struct ChoreService {
         })
     }
     
+    
     static func completeChore(chore: Chore, completion: () -> Void) {
         
     }
     
+    static func deleteChore(chore: Chore, completion: @escaping ([Chore]?) -> Void) {
     
-    static func getChores( completion: ([Chore]?) -> Void) {
-        
     }
-    
-    
-    static func deleteChores(_ user: String, groupID: String, title: String, days: [Day], completion: ([Chore]?) -> Void) {
-        
-    }
-}
+
 
 
 /* add the Bool to check whether the task was complete/not on line 17, let choreAttrs after -> completed: completed */
-
+    
+}
 
 
 

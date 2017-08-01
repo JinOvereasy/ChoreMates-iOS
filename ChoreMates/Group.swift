@@ -16,8 +16,8 @@ class Group {
     var chores: [Chore]?
     
     static var currentGroup: Group?
-    let user: User
-    var key: String?
+//    let user: User
+//    var key: String?
     
 //    var dictValue: [String: Any] {
 //        let userDict = [ user.groupID :
@@ -28,7 +28,7 @@ class Group {
 //                "chores" : chores!,
 //                "user" : userDict]
 //    }
-//    
+    
     init(id: String) {
         self.id = id
         Group.currentGroup = self

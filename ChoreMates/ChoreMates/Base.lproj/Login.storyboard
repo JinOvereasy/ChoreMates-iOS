@@ -24,15 +24,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x8j-az-utW">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ChoreMates" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivO-Q8-beJ" userLabel="titleLabel">
-                                        <rect key="frame" x="63" y="91" width="249" height="92"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ChoreMates" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivO-Q8-beJ" userLabel="titleLabel">
+                                        <rect key="frame" x="10" y="100" width="355" height="59"/>
                                         <fontDescription key="fontDescription" name="GujaratiSangamMN-Bold" family="Gujarati Sangam MN" pointSize="42"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTH-eg-nKp">
-                                        <rect key="frame" x="59" y="387" width="256" height="60"/>
+                                        <rect key="frame" x="59" y="366" width="256" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Log In"/>
                                         <connections>
@@ -40,7 +39,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4C0-Jd-KYM">
-                                        <rect key="frame" x="59" y="329" width="256" height="50"/>
+                                        <rect key="frame" x="59" y="308" width="256" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Forgot password?"/>
                                         <connections>
@@ -48,21 +47,21 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Bk-KY-TNO">
-                                        <rect key="frame" x="59" y="253" width="256" height="30"/>
+                                        <rect key="frame" x="59" y="233" width="256" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JYY-0m-lZH">
-                                        <rect key="frame" x="59" y="205" width="256" height="30"/>
+                                        <rect key="frame" x="59" y="186" width="256" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="up2-rD-SFt">
-                                        <rect key="frame" x="63" y="474" width="256" height="60"/>
+                                        <rect key="frame" x="59" y="434" width="256" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Sign Up"/>
                                         <userDefinedRuntimeAttributes>
@@ -74,14 +73,19 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.91755186929999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ivO-Q8-beJ" firstAttribute="leading" secondItem="x8j-az-utW" secondAttribute="leading" constant="10" id="NFQ-SS-y5M"/>
+                                    <constraint firstAttribute="trailing" secondItem="ivO-Q8-beJ" secondAttribute="trailing" constant="10" id="Um8-d4-E9R"/>
+                                    <constraint firstItem="ivO-Q8-beJ" firstAttribute="top" secondItem="x8j-az-utW" secondAttribute="top" constant="100" id="obr-E0-1Cr"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="x8j-az-utW" firstAttribute="leading" secondItem="5fO-oV-p5Z" secondAttribute="leading" id="6Z5-Dx-opq"/>
-                            <constraint firstItem="x8j-az-utW" firstAttribute="top" secondItem="5fO-oV-p5Z" secondAttribute="top" id="Flu-iW-1eS"/>
-                            <constraint firstAttribute="trailing" secondItem="x8j-az-utW" secondAttribute="trailing" id="Ird-Gj-FE3"/>
-                            <constraint firstItem="Cf8-El-jh7" firstAttribute="top" secondItem="x8j-az-utW" secondAttribute="bottom" id="Zjt-s3-0Xg"/>
+                            <constraint firstItem="x8j-az-utW" firstAttribute="leading" secondItem="5fO-oV-p5Z" secondAttribute="leading" id="6nh-fv-6zj"/>
+                            <constraint firstAttribute="trailing" secondItem="x8j-az-utW" secondAttribute="trailing" id="cHh-oR-1is"/>
+                            <constraint firstItem="x8j-az-utW" firstAttribute="top" secondItem="5fO-oV-p5Z" secondAttribute="top" id="dyB-gI-Uz4"/>
+                            <constraint firstItem="x8j-az-utW" firstAttribute="bottom" secondItem="Cf8-El-jh7" secondAttribute="top" id="oyC-XD-ZER"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="THp-y1-uOe"/>

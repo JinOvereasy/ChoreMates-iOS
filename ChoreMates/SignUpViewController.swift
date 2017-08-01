@@ -54,13 +54,11 @@ class SignUpViewController: UIViewController {
             }
             // Dismiss keyboard
             self.view.endEditing(true)
-            
               // Send verification email
-              // user?.sendEmailVerification(completion: nil)
+              user?.sendEmailVerification(completion: nil)
             
             let alertController = UIAlertController(title: "Email Verification", message: "We've just sent a confirmation email to your email address. Please check your inbox and click the verification link in that email to complete the sign up.", preferredStyle: .alert)
             let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: { (action) in
-                
                 
                 // USER SERVICE CREATE USER
                 UserService.create(user!, username: self.userNameTextField.text!, groupID: self.groupIDTextField.text!, completion: { (newUser) in
@@ -78,6 +76,15 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         userNameTextField.becomeFirstResponder()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignUpViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     override func didReceiveMemoryWarning() {

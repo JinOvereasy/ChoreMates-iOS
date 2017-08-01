@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseDatabase.FIRDataSnapshot
 
 enum Day: String {
     case Su, M, Tu, W, Th, F, S
@@ -25,17 +26,18 @@ class Chore {
         self.days = days
         self.uid = uid
         // self.completed = completed
-        // let day = Day.Su
-        // let rawDay = day.rawValue
     }
     
 //    convenience init?(snapshot: DataSnapshot) {
 //        guard let dict = snapshot.value as? [String : Any],
-//            let username = dict["username"] as? String,
-//            let groupID = dict["groupID"] as? String
+//            let title = dict["title"] as? String,
+//            let user = dict["user"] as? String,
+//            let days = dict["days"] as? [Day],
+//            let uid = dict["uid"] as? String
+//
 //            else { return nil}
 //        
-//        self.init(uid: snapshot.key, username: username, groupID: groupID)
+//        self.init(uid: snapshot.key, title: title, user: user)
 //    }
     
 }

@@ -27,6 +27,8 @@ class AllChoresViewController: UIViewController {
                                      Chore(title: "do chore 1 other user", user: User(uid: "aksdjfkjsdhf", username: "five", groupID: "ios"), days: [.M, .Th], uid: "uidChore"),
                                      Chore(title: "do chore 2 other user", user: User(uid: "aksdjfkjsdhf", username: "six", groupID: "ios"), days: [.S], uid: "uidChore"),
                                      Chore(title: "do chore 3 other user", user: User(uid: "aksdjfkjsdhf", username: "sev", groupID: "ios"), days: [.Su], uid: "uidChore")]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -76,15 +78,18 @@ extension AllChoresViewController: UITableViewDataSource {
         if indexPath.section == 0 {
             cell.choreTitleLabel.text = myOwnChoresArray[indexPath.row].title
             cell.dueDateLabel.text = "\(myOwnChoresArray[indexPath.row].days.map({ $0.rawValue }).joined(separator: ", "))"
+            // cell.accessoryType = .checkmark
         } else if indexPath.section == 1 {
             cell.choreTitleLabel.text = otherChoresArray[indexPath.row].title
             cell.dueDateLabel.text = "\(otherChoresArray[indexPath.row].days.map({ $0.rawValue }).joined(separator: ", "))"
+            // cell.accessoryType = .checkmark
             } else {
                 cell.choreTitleLabel.text = "Empty Empty nil"
+                // cell.accessoryType = .none
             }
         return cell
     }
-    
+
 }
 
 extension AllChoresViewController: UITableViewDelegate {

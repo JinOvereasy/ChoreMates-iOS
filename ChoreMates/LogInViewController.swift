@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseAuthUI
 
-class LogInViewController: UIViewController {
+class LogInViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var window: UIWindow?
     
@@ -91,8 +91,18 @@ class LogInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
         // Hide the navigation bar for current view controller
         self.navigationController?.isNavigationBarHidden = true
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LogInViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -106,7 +116,7 @@ class LogInViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Navigation
 }
 

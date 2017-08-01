@@ -47,8 +47,17 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         self.personPicker.delegate = self
         self.personPicker.dataSource = self
         pickerData = ["Will", "Jeff", "Jin", "Su"]
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LogInViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
     
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -71,7 +80,6 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     }
     
     // MARK: - Navigation
-    
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if identifier == "Update" {
             guard let choreTitle = choreTextField.text,
