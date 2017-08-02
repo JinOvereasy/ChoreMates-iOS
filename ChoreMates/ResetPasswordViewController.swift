@@ -10,7 +10,6 @@ import UIKit
 import Firebase
 
 class ResetPasswordViewController: UIViewController {
-
     // MARK: - IBOutlet
     @IBOutlet weak var emailTextField: UITextField!
     
@@ -23,7 +22,6 @@ class ResetPasswordViewController: UIViewController {
                 let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                 alertController.addAction(okayAction)
                 present(alertController, animated: true, completion: nil)
-                
                 return
         }
         

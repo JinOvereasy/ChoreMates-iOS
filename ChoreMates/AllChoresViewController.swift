@@ -16,8 +16,14 @@ class AllChoresViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let sectionTitle = ["My Chores", "Other's Chores"]
-    // var myOwnChoresArray: [Chore]()
-    // var otherChoresArray: [Chore]()
+    
+//     if User.currentUser == myOwnChores.array 's user
+//     var myOwnChoresArray: [Chore] = GroupService.getChoresInGroup(groupID: "bird") { ([chore]) in
+//        completion([chore])
+//    }
+//     var otherChoresArray: [Chore] = GroupService.getChoresInGroup(groupID: "pizza") { ([chore]) in
+////        completion([chore])
+//    }
     
     var myOwnChoresArray: [Chore] = [Chore(title: "do chore 0", user: User(uid: "aksdjfkjsdhf", username: "first", groupID: "ios"), days: [.Su], uid: "uidChore"),
                                      Chore(title: "do chore 1", user: User(uid: "aksdjfkjsdhf", username: "sec", groupID: "ios"), days: [.M, .W], uid: "uidChore"),
@@ -28,11 +34,9 @@ class AllChoresViewController: UIViewController {
                                      Chore(title: "do chore 2 other user", user: User(uid: "aksdjfkjsdhf", username: "six", groupID: "ios"), days: [.S], uid: "uidChore"),
                                      Chore(title: "do chore 3 other user", user: User(uid: "aksdjfkjsdhf", username: "sev", groupID: "ios"), days: [.Su], uid: "uidChore")]
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,7 +48,6 @@ class AllChoresViewController: UIViewController {
     @IBAction func unwindtoAllChoresView (segue: UIStoryboardSegue) {
         dismiss(animated: true, completion: nil)
     }
-    
     // MARK: - Navigation
 }
 

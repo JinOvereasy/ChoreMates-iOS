@@ -14,7 +14,6 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     var chore: Chore?
     var daysArray: [Day] = [Day]()
     var pickerData: [String] = [String]()
-    
     // var daysPickedHolder: [Day] = [Day]()
     var placementAnswer = 0
     
@@ -57,7 +56,7 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -87,7 +86,7 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                 let _ = User.currentUser,
                 daysArray.count > 0
                 else {
-                    let alertController = UIAlertController(title: "Blank fields", message: "Not all fields are populated or user did not sign in properly.", preferredStyle: .alert)
+                    let alertController = UIAlertController(title: "Blank fields", message: "Not all fields are filled or the user did not sign in properly.", preferredStyle: .alert)
                     let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                     alertController.addAction(okayAction)
                     present(alertController, animated: true, completion: nil)
@@ -106,7 +105,7 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                     return
             }
             if chore == nil {
-                self.chore = Chore(title: choreTitle, user: currentUser, days: daysArray, uid: nil)
+                self.chore = Chore(title: choreTitle, user: currentUser, days: daysArray, uid: nil /*, completed: false */)
             }
             ChoreService.editChore(chore: chore!, completion: { (user) in
             })

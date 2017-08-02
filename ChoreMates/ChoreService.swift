@@ -37,13 +37,36 @@ struct ChoreService {
         })
     }
     
+//    static func getChoresInGroup(groupID: String, completion: @escaping ([Chore]?) -> Void) {
+//        // FILL IN COMPLETION PARAMETER
+//        let ref = Database.database().reference().child("chores").child(groupID)
+//        ref.observeSingleEvent(of: .value, with:  { (snapshot) in
+//            guard let choreSnapshots = snapshot.children.allObjects as? [DataSnapshot] else {
+//                return
+//            }
+//            var choresInGroup = [Chore]()
+//            for snap in choreSnapshots {
+//                choresInGroup.append(Chore(snapshot: snap)!)
+//            }
+//            completion(choresInGroup)
+//        })
+//    }
     
-    static func completeChore(chore: Chore, completion: () -> Void) {
-        
-    }
-    
+//    static func completeChore(chore: Chore, success: @escaping(Bool) -> Void) {
+//        // 1
+//        guard let key = chore.key else {
+//            return success(false)
+//        }
+//        // 2
+//        let currentUID = User.currentUser?.uid
+//        
+//        let doneRef = Database.database().reference().child("chores").child(completed)
+//        
+//        
+//    }
+
     static func deleteChore(chore: Chore, completion: @escaping ([Chore]?) -> Void) {
-    
+        
     }
 
 
@@ -53,7 +76,25 @@ struct ChoreService {
 }
 
 
+/*
+ static func getChoresInGroup(groupID: String, completion: @escaping ([Chore]?) -> Void) {
+ // FILL IN COMPLETION PARAMETER
+ let ref = Database.database().reference().child("chores").child(groupID)
+ ref.observeSingleEvent(of: .value, with:  { (snapshot) in
+ guard let dictionary = snapshot.value as? [String: Any]
+ else {
+ return
+ }
+ var choresInGroup = [Chore]()
+ 
+ for (_, value) in dictionary {
+ choresInGroup.append(value as! Chore)
+ }
+ completion(choresInGroup)
+ })
+ }
 
+ */
 
 
 

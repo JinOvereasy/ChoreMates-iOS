@@ -14,8 +14,8 @@ class Group {
     var id: String
     var users: [User]?
     var chores: [Chore]?
-    
     static var currentGroup: Group?
+    
 //    let user: User
 //    var key: String?
     
@@ -28,7 +28,6 @@ class Group {
 //                "chores" : chores!,
 //                "user" : userDict]
 //    }
-    
     init(id: String) {
         self.id = id
         Group.currentGroup = self

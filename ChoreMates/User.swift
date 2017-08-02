@@ -28,17 +28,18 @@ class User {
         guard let dict = snapshot.value as? [String : Any],
             let username = dict["username"] as? String,
             let groupID = dict["groupID"] as? String
-            else { return nil}
+            else { return nil }
         
         self.init(uid: snapshot.key, username: username, groupID: groupID)
     }
     
-    //    class func setCurrent(_ user: User, writeToUserDefaults: Bool = false) {
-    //        if writeToUserDefaults {
-    //            let data = NSKeyedArchiver.archivedData(withRootObject: user)
-    //            UserDefaults.standard.set(data, forKey: currentUser?)
-    //        }
-    //        currentUser = user
-    //    }
 }
+
+
+
+
+
+
+
+
 

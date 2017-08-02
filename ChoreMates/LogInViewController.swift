@@ -46,6 +46,7 @@ class LogInViewController: UIViewController, UIGestureRecognizerDelegate {
                 return
             }
             // Email verification
+            /*
             guard let currentUser = user, currentUser.isEmailVerified else {
                 let alertController = UIAlertController(title: "Login Error", message: "You haven't confirmed your email address yet. We sent you a confirmation email when you sign up. Please click the verification link in that email. If you need us to send the confirmation email again, please tap Resent email.", preferredStyle: .alert)
                 let okayAction = UIAlertAction(title: "Resent email", style: .default, handler: { (action) in
@@ -58,6 +59,7 @@ class LogInViewController: UIViewController, UIGestureRecognizerDelegate {
                 
                 return
             }
+             */
             
             // dissmiss keyboard
             self.view.endEditing(true)
